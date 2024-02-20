@@ -1,0 +1,9 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+# sections:
+- file: 01-the-dirac-equation.ipynb
+- file: 02-lorentz-invariance-of-dirac-eqn.ipynb
