@@ -173,7 +173,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to your Jupyter Book
+                    Quantum Mechanics
                 </a>
             </li>
         </ul>
@@ -690,14 +690,15 @@ S^{\mu\nu} = a(\gamma^\mu\gamma^\nu - \gamma^\mu\gamma^\nu)
 <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> with this ansatz gives us</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{aligned}
-[\gamma^\mu, S^{\rho\sigma}] &amp;= 2a(\gamma^\mu\gamma^\rho\gamma^\sigma - 
-\gamma^\rho\gamma^\sigma\gamma^\mu) \\[8pt]
-&amp; = 2a (\gamma^\mu\gamma^\rho\gamma^\sigma + \gamma^\rho\gamma^\mu\gamma^\sigma - 
+\begin{aligned}{}
+[\gamma^{\mu}, S^{\rho\sigma}] 
+&amp;= 2a(\gamma^\mu\gamma^\rho\gamma^\sigma
+- \gamma^\rho\gamma^\sigma\gamma^\mu) \\[8pt]
+&amp;= 2a (\gamma^\mu\gamma^\rho\gamma^\sigma + \gamma^\rho\gamma^\mu\gamma^\sigma - 
 \gamma^\rho\gamma^\mu\gamma^\sigma - \gamma^\rho\gamma^\sigma\gamma^\mu) \\[8pt]
-&amp; = 2a (\{\gamma^\mu, \gamma^\rho\} \gamma^\sigma - 
+&amp;= 2a (\{\gamma^\mu, \gamma^\rho\} \gamma^\sigma - 
 \gamma^\rho\{\gamma^\mu, \gamma^\sigma\}) \\[8pt]
-&amp; = 4a(\eta^{\mu\rho}\gamma^\sigma - \eta^{\mu\sigma}\gamma^\rho)
+&amp;= 4a(\eta^{\mu\rho}\gamma^\sigma - \eta^{\mu\sigma}\gamma^\rho)
 \end{aligned}
 \end{split}\]</div>
 <p>In order for our ansatz to match the commutation relation, we need <span class="math notranslate nohighlight">\(a = 1/4\)</span>.
@@ -731,7 +732,7 @@ S = \exp\left(\frac{1}{4} \omega_{\rho\sigma}\gamma^\rho\gamma^\sigma\right).
 <span class="math notranslate nohighlight">\(r^1 = x\)</span> direction,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-S^{01} = -S^{10} =
+S^{01} = -S^{10} = \dfrac{1}{2}
 \begin{pmatrix}
 0 &amp; 0 &amp; 0 &amp; 1 \\
 0 &amp; 0 &amp; 1 &amp; 0 \\
@@ -740,8 +741,8 @@ S^{01} = -S^{10} =
 \end{pmatrix}
 \end{split}\]</div>
 <p>with the <span class="math notranslate nohighlight">\(S\)</span> matrix taking the form</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<div class="math notranslate nohighlight" id="equation-eq-boostx">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-boostx" title="Link to this equation">#</a></span>\[\begin{split}
 S = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
 \gamma^0\gamma^1\sinh\left(\dfrac{\chi}{2}\right) =
 \left(
@@ -797,7 +798,7 @@ S^\dagger = \exp\left(
 \frac{1}{4}\omega_{\rho\sigma}(\gamma^\sigma)^\dagger(\gamma^\rho)^\dagger
 \right)
 \]</div>
-<p>In our chosen basis, <span class="math notranslate nohighlight">\(\gamma^0\)</span> is hermitian and <span class="math notranslate nohighlight">\(\gamma^i\)</span> are antihermitian.
+<p>For our choice of spacetime metric, <span class="math notranslate nohighlight">\(\gamma^0\)</span> is hermitian and <span class="math notranslate nohighlight">\(\gamma^i\)</span> are antihermitian.
 Using the anticommutation relations, we can combine these facts to obtain</p>
 <div class="math notranslate nohighlight">
 \[
@@ -970,13 +971,14 @@ combination of <span class="math notranslate nohighlight">\(I_4, \gamma^5, \gamm
 <li><p>Starting with the Lorentz invariance of the Dirac equation,</p>
 <div class="math notranslate nohighlight">
 \[
-   i\hbar\gamma^\mu\partial_\mu\psi - mc\psi
-   \to i\hbar\gamma^\mu\partial'_\mu\psi' - mc\psi',
+   i\hbar\gamma^\mu\partial_\mu\psi - mc\psi = 0
+   \to i\hbar\gamma^\mu\partial'_\mu\psi' - mc\psi' = 0,
    \]</div>
 <p>derive the rule <span class="math notranslate nohighlight">\(S^{-1}\gamma^\mu S = {\Lambda^\mu}_\nu \gamma^\nu\)</span>.</p>
 </li>
-<li><p>Show that <span class="math notranslate nohighlight">\(S^\dagger S \ne I_4\)</span> for a boost in the <span class="math notranslate nohighlight">\(x\)</span>-direction. What
-happens to your result in the nonrelativistic limit <span class="math notranslate nohighlight">\(v \ll c\)</span>?</p></li>
+<li><p>Show that <span class="math notranslate nohighlight">\(S^\dagger S \ne I_4\)</span> for a boost in the <span class="math notranslate nohighlight">\(x\)</span>-direction
+(Eq. <a class="reference internal" href="#equation-eq-boostx">()</a>). What happens to your result in the nonrelativistic
+limit <span class="math notranslate nohighlight">\(v \ll c\)</span>?</p></li>
 <li><p>Show that <span class="math notranslate nohighlight">\(\gamma^0 S^\dagger \gamma^0 = S^{-1}\)</span> for a boost in the
 <span class="math notranslate nohighlight">\(x\)</span>-direction.</p></li>
 <li><p>Prove that <span class="math notranslate nohighlight">\(\sigma^{ij} = \varepsilon^{ijk}\Sigma^{k}\)</span>, where</p>
@@ -991,8 +993,18 @@ happens to your result in the nonrelativistic limit <span class="math notranslat
    \end{split}\]</div>
 <p>is the Levi-Civita symbol.</p>
 </li>
-<li><p>Show that <span class="math notranslate nohighlight">\(\gamma^5\)</span> anticommutes with all the gamma matrices, i.e.
-<span class="math notranslate nohighlight">\(\{\gamma^5, \gamma^\mu\} = \gamma^5\gamma^\mu + \gamma^\mu\gamma^5 = 0\)</span>.</p></li>
+<li><p>(a) Show that <span class="math notranslate nohighlight">\(\gamma^5\)</span> anticommutes with all the gamma matrices, i.e.
+<span class="math notranslate nohighlight">\(\{\gamma^5, \gamma^\mu\} = \gamma^5\gamma^\mu + \gamma^\mu\gamma^5 = 0\)</span>.
+<br>
+(b) Show that <span class="math notranslate nohighlight">\(\gamma^0\gamma^i = \gamma^5 \Sigma^i\)</span>, so that in the Dirac
+basis the formula for Lorentz boosts can be rewritten</p>
+<div class="math notranslate nohighlight">
+\[
+   S_{\rm boost} = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
+   \gamma^5 (\boldsymbol{\Sigma} \cdot \boldsymbol{\hat{\rm n}})
+   \sinh\left(\dfrac{\chi}{2}\right).
+   \]</div>
+</li>
 <li><p>(a) Prove that
 <span class="math notranslate nohighlight">\([H, \mathbf{L}] = i\hbar c \gamma^0 (\boldsymbol{\gamma}\times \mathbf{p})\)</span>,
 which shows that <span class="math notranslate nohighlight">\(\mathbf{L}\)</span> is not a conserved quantity for a Dirac spinor.
