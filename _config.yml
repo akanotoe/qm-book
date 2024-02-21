@@ -30,8 +30,11 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+<<<<<<< HEAD
 
 # Use Mathjax 3
 sphinx:
   config:
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+=======
+>>>>>>> d4568a8078bd5a3d3c46c2308455e0213c64c502

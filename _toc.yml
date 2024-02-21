@@ -3,9 +3,14 @@
 
 format: jb-book
 root: intro
+<<<<<<< HEAD
 options:
   numbered: true
 chapters:
 - file: the-schrodinger-eqn.ipynb
+=======
+chapters:
+# sections:
+>>>>>>> d4568a8078bd5a3d3c46c2308455e0213c64c502
 - file: 01-the-dirac-equation.ipynb
 - file: 02-lorentz-invariance-of-dirac-eqn.ipynb
