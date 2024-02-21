@@ -1,0 +1,1115 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lorentz Invariance of the Dirac Equation &#8212; Quantum Mechanics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../../../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../../../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../../../../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../../../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../../../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../../../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'qm-book/_build/jupyter_execute/qm-book/_build/jupyter_execute/qm-book/_build/jupyter_execute/02-lorentz-invariance-of-dirac-eqn';</script>
+    <link rel="index" title="Index" href="../../../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../../../../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../../../../../_static/logo.png" class="logo__image only-light" alt="Quantum Mechanics - Home"/>
+    <script>document.write(`<img src="../../../../../../../../../_static/logo.png" class="logo__image only-dark" alt="Quantum Mechanics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../../../../../../intro.html">
+                    Quantum Mechanics
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../../01-the-dirac-equation.html">Relativistic Quantum Mechanics</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../../02-lorentz-invariance-of-dirac-eqn.html">Lorentz Invariance of the Dirac Equation</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fqm-book/_build/jupyter_execute/qm-book/_build/jupyter_execute/qm-book/_build/jupyter_execute/02-lorentz-invariance-of-dirac-eqn.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../../../../../../_sources/qm-book/_build/jupyter_execute/qm-book/_build/jupyter_execute/qm-book/_build/jupyter_execute/02-lorentz-invariance-of-dirac-eqn.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lorentz Invariance of the Dirac Equation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Lorentz Invariance of the Dirac Equation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bilinear-invariants">Bilinear Invariants</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="lorentz-invariance-of-the-dirac-equation">
+<h1>Lorentz Invariance of the Dirac Equation<a class="headerlink" href="#lorentz-invariance-of-the-dirac-equation" title="Link to this heading">#</a></h1>
+<p>Since we derived the Dirac equation using a relativistic relationship,
+it should remain invariant under Lorentz transformations, i.e. boosts and
+rotations. Let’s act agnostic to the fact that <span class="math notranslate nohighlight">\(\psi\)</span> is not a four-vector,
+and instead say there exists some matrix <span class="math notranslate nohighlight">\(S\)</span> that transforms <span class="math notranslate nohighlight">\(\psi\)</span> under
+Lorentz transformations,</p>
+<div class="math notranslate nohighlight">
+\[
+\psi\to \psi' = S\psi.
+\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(S\)</span> must be some <span class="math notranslate nohighlight">\(4\times 4\)</span> matrix for <span class="math notranslate nohighlight">\(\psi\)</span> to maintain its
+form as a column matrix with four entries. Recall that four-vectors transform
+according to</p>
+<div class="math notranslate nohighlight">
+\[
+r'^\mu = {\Lambda^\mu}_\nu r^\nu
+\]</div>
+<p>where <span class="math notranslate nohighlight">\({\Lambda^\mu}_\nu\)</span> is the standard Lorentz transformation matrix. For
+boosts in the <span class="math notranslate nohighlight">\(r^1 = x\)</span> direction, <span class="math notranslate nohighlight">\(\Lambda\)</span> takes the form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation}
+\Lambda = 
+\begin{pmatrix}
+\gamma &amp; -\gamma\beta &amp; 0 &amp; 0 \\
+-\gamma\beta &amp; \gamma &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}
+\end{equation}
+\end{split}\]</div>
+<p>yielding</p>
+<div class="math notranslate nohighlight">
+\[
+ct' = \gamma (ct - \beta x), \qquad
+x' = \gamma (x - \beta ct), \qquad
+y' = y, \qquad
+z' = z.
+\]</div>
+<p>If <span class="math notranslate nohighlight">\(\psi\)</span> were a four-vector, then <span class="math notranslate nohighlight">\(S = \Lambda\)</span>. We will see, however,
+that this is not the case. First, we apply a Lorentz transformation to the
+Dirac equation assuming that <span class="math notranslate nohighlight">\(S\)</span> is the matrix that transforms <span class="math notranslate nohighlight">\(\psi\)</span>. Since
+<span class="math notranslate nohighlight">\(\partial_\mu\)</span> is covariant,</p>
+<div class="math notranslate nohighlight">
+\[
+\partial'_\mu = {(\Lambda^{-1})^\nu}_\mu \partial_\nu
+\]</div>
+<!-- Putting all this into the Dirac equation gives us
+
+$$
+i\hbar S^{-1}\gamma^\mu S {(\Lambda^{-1})^\nu}_\mu\partial_\nu\psi - 
+mc\psi = 0.
+$$ -->
+<p>In order for the Dirac equation to be Lorentz invariant, then, the following
+relation must hold.</p>
+<!-- $$
+S^{-1}\gamma^\mu S {(\Lambda^{-1})^\nu}_\mu = \gamma^\nu
+$$
+or, acting from the right with $\Lambda$, -->
+<div class="math notranslate nohighlight">
+\[
+S^{-1}\gamma^\mu S = {\Lambda^\mu}_\nu\gamma^\nu.
+\]</div>
+<p>The way we find the relationship between <span class="math notranslate nohighlight">\(S\)</span> and <span class="math notranslate nohighlight">\(\Lambda\)</span> is by working
+with infinitesimal transformations and then building up to finite
+transformations. We take the infinitesimal form of <span class="math notranslate nohighlight">\(\Lambda\)</span> to be</p>
+<div class="math notranslate nohighlight">
+\[
+{\Lambda^\mu}_\nu \approx {\delta^\mu}_\nu + {\omega^\mu}_\nu,
+\]</div>
+<p>where we define the Kronecker delta</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+{\delta^\mu}_\nu =
+\begin{cases}
+1, \qquad \mu = \nu\\
+0, \qquad \mu \ne \nu
+\end{cases}
+\end{split}\]</div>
+<p>and <span class="math notranslate nohighlight">\({\omega^\mu}_\nu\)</span> is some <span class="math notranslate nohighlight">\(4\times 4\)</span> matrix. The defining quality of
+the Lorentz transformation is that it leaves the Minkowski spacetime metric
+invariant,</p>
+<div class="math notranslate nohighlight">
+\[
+{\Lambda^\mu}_\rho {\Lambda^\nu}_\sigma \eta^{\rho\sigma} = \eta^{\mu\nu}.
+\]</div>
+<p>Substituting the infinitesimal form of <span class="math notranslate nohighlight">\(\Lambda\)</span> into this equation results
+in the constraint that</p>
+<div class="math notranslate nohighlight">
+\[
+\omega^{\mu\nu} + \omega^{\nu\mu} = 0.
+\]</div>
+<p>Note that this antisymmetry applies when both indices are upper or
+lower, but not when the indices are mixed upper and lower. We can use Kronecker
+deltas and <span class="math notranslate nohighlight">\(\eta^{\mu\nu}\)</span> to get</p>
+<div class="math notranslate nohighlight">
+\[
+{\omega^\mu}_\nu = \frac{1}{2}\omega_{\rho\sigma}
+(\eta^{\mu\rho}{\delta^\sigma}_\nu - \eta^{\mu\sigma}{\delta^\rho}_\nu)
+\]</div>
+<p>where we took advantage of the antisymmetry of <span class="math notranslate nohighlight">\(\omega_{\rho\sigma}\)</span>. We
+define the matrix in parentheses as</p>
+<div class="math notranslate nohighlight">
+\[
+{(M^{\rho\sigma})^\mu}_\nu = \eta^{\mu\rho}{\delta^\sigma}_\nu - 
+\eta^{\mu\sigma}{\delta^\rho}_\nu.
+\]</div>
+<p>If we raise the <span class="math notranslate nohighlight">\(\nu\)</span> index, we find that this matrix is antisymmetric in both
+<span class="math notranslate nohighlight">\(\mu\nu\)</span> and <span class="math notranslate nohighlight">\(\rho\sigma\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+(M^{\rho\sigma})^{\mu\nu} =
+\eta^{\mu\rho}\eta^{\sigma\nu} - \eta^{\nu\rho}\eta^{\mu\sigma}
+\]</div>
+<p>Thus, <span class="math notranslate nohighlight">\((M^{\rho\sigma})^{\mu\nu}\)</span> represents 6 different matrices (denoted by
+the pair <span class="math notranslate nohighlight">\(\rho\sigma\)</span>) which are <span class="math notranslate nohighlight">\(4\times 4\)</span> whose matrix elements are denoted
+by the pair <span class="math notranslate nohighlight">\(\mu\nu\)</span>. When contracted with the <span class="math notranslate nohighlight">\(\omega_{\rho\sigma}\)</span> constants,
+we get the infinitesimal Lorentz transformation</p>
+<div class="math notranslate nohighlight">
+\[
+{\Lambda^\mu}_\nu \approx {\delta^\mu}_\nu + 
+\frac{1}{2}\omega_{\rho\sigma} {(M^{\rho\sigma})^\mu}_\nu
+\]</div>
+<p>which, for finite transformations, becomes</p>
+<div class="math notranslate nohighlight">
+\[
+\Lambda = \exp\left(\frac{1}{2}\omega_{\rho\sigma}M^{\rho\sigma}\right).
+\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(\omega_{\rho\sigma}\)</span> are a set of constants (the matrix behavior of
+<span class="math notranslate nohighlight">\({\omega^\mu}_\nu\)</span> has been extracted to the <span class="math notranslate nohighlight">\({(M^{\rho\sigma})^\mu}_\nu\)</span> now) which tell
+us what kind of Lorentz transformation we’re applying with <span class="math notranslate nohighlight">\(\Lambda\)</span>. The
+<span class="math notranslate nohighlight">\(M^{\rho\sigma}\)</span> matrices are known as the <em>generators</em> of the Lorentz
+transformations.</p>
+<p>As an example of how this plays out, a boost in the <span class="math notranslate nohighlight">\(x\)</span>-direction has
+<span class="math notranslate nohighlight">\(\omega_{10} = -\omega_{01} = \chi = \tanh^{-1}(\beta)\)</span>, with <span class="math notranslate nohighlight">\(\beta = v/c\)</span> and
+<span class="math notranslate nohighlight">\(\chi\)</span> being the <strong>rapidity</strong>, a relativistic quantity derived from the speed.
+In fact, it’s not hard to show that</p>
+<div class="math notranslate nohighlight">
+\[
+\cosh(\chi) = \gamma, \qquad \sinh(\chi) = \gamma\beta.
+\]</div>
+<p>The corresponding <span class="math notranslate nohighlight">\(M\)</span> matrix is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+{(M^{01})^\mu}_\nu = -{(M^{10})^\mu}_\nu =
+\begin{pmatrix}
+0 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix}
+\end{split}\]</div>
+<p>Summing the terms and exponentiating results in</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Lambda &amp;= \cosh(\chi)
+\begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix} -
+\sinh(\chi)
+\begin{pmatrix}
+0 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix} + 
+\begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix} \\[8pt] &amp;=
+\begin{pmatrix}
+\cosh(\chi) &amp; -\sinh(\chi) &amp; 0 &amp; 0 \\
+-\sinh(\chi) &amp; \cosh(\chi) &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}
+\end{aligned}
+\end{split}\]</div>
+<p>which (with a little substitution) matches matrix at the top of the page.
+Below is some code that demonstrates this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">linalg</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m_01</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">k</span><span class="o">=-</span><span class="mi">2</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;M^</span><span class="si">{01}</span><span class="s1"> = &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m_01</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Use beta parameter of sqrt(3/4), as this gives a gamma of 2 for easy</span>
+<span class="c1"># verification.</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="mi">3</span><span class="o">**</span><span class="mf">.5</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;beta = </span><span class="si">{</span><span class="n">beta</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;gamma = </span><span class="si">{</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**-</span><span class="mf">.5</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;gamma*beta = </span><span class="si">{</span><span class="n">beta</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**-</span><span class="mf">.5</span><span class="si">}</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">chi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctanh</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\Lambda = &#39;</span><span class="p">)</span>
+<span class="c1"># The extra factor of two below comes from summing omega_10 M^10 + omega_01 M^10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">linalg</span><span class="o">.</span><span class="n">expm</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="n">chi</span> <span class="o">*</span> <span class="n">m_01</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>M^{01} = 
+[[0 1 0 0]
+ [1 0 0 0]
+ [0 0 0 0]
+ [0 0 0 0]]
+
+
+beta = 0.8660254037844386
+gamma = 1.9999999999999996
+gamma*beta = 1.7320508075688767
+
+\Lambda = 
+[[ 2.         -1.73205081  0.          0.        ]
+ [-1.73205081  2.          0.          0.        ]
+ [ 0.          0.          1.          0.        ]
+ [ 0.          0.          0.          1.        ]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, we want to take this infinitesimal form of <span class="math notranslate nohighlight">\(\Lambda\)</span> and use it to find a
+relation for <span class="math notranslate nohighlight">\(S\)</span>. Mimicking the exponential form of <span class="math notranslate nohighlight">\(\Lambda\)</span>, we’ll write</p>
+<div class="math notranslate nohighlight">
+\[
+S = \exp\left(\frac{1}{2} \omega_{\rho\sigma} S^{\rho\sigma}\right),
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(S^{\rho\sigma}\)</span> are a collection of six <span class="math notranslate nohighlight">\(4\times 4\)</span> matrices to be
+determined in a similar manner to the <span class="math notranslate nohighlight">\(M^{\rho\sigma}\)</span>. Note that we’re using
+the same <span class="math notranslate nohighlight">\(\omega_{\rho\sigma}\)</span> in the formulation of <span class="math notranslate nohighlight">\(S\)</span> to ensure that we’re
+applying the same Lorentz transformation to <span class="math notranslate nohighlight">\(\psi\)</span>. For infinitesimal
+transformations,</p>
+<div class="math notranslate nohighlight">
+\[
+S \approx I_4 + \frac{1}{2}\omega_{\rho\sigma} S^{\rho\sigma},
+\]</div>
+<p>which implies</p>
+<div class="math notranslate nohighlight">
+\[
+S^{-1} \approx I_4 - \frac{1}{2}\omega_{\rho\sigma} S^{\rho\sigma},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(I_4\)</span> is the <span class="math notranslate nohighlight">\(4\times 4\)</span> identity matrix. The relationship with the gamma
+matrices now reads</p>
+<div class="math notranslate nohighlight">
+\[
+\left(I_4 - \frac{1}{2}\omega_{\rho\sigma} S^{\rho\sigma}\right) 
+\gamma^\mu
+\left(I_4 + \frac{1}{2}\omega_{\rho\sigma} S^{\rho\sigma}\right) = 
+\left({\delta^\mu}_\nu + \frac{1}{2}\omega_{\rho\sigma} 
+{(M^{\rho\sigma})^\mu}_\nu\right)
+\gamma^\nu.
+\]</div>
+<p>Looking at terms linear in <span class="math notranslate nohighlight">\(\omega_{\rho\sigma}\)</span> on each side and equating
+them yields</p>
+<div class="math notranslate nohighlight">
+\[
+(\gamma^\mu S^{\rho\sigma} - S^{\rho\sigma}\gamma^\mu) =
+ {(M^{\rho\sigma})^\mu}_\nu\gamma^\nu = 
+ (\eta^{\mu\rho}{\delta^\sigma}_\nu - \eta^{\mu\sigma}{\delta^\rho}_\nu)
+\gamma^\nu
+\]</div>
+<p>Defining the commutator of two matrices to be <span class="math notranslate nohighlight">\([A, B] = AB - BA\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+[\gamma^\mu, S^{\rho\sigma}] = \eta^{\mu\rho}\gamma^\sigma - \eta^{\mu\sigma}\gamma^\rho.
+\]</div>
+<p>At this point, all we need to do is find a set of <span class="math notranslate nohighlight">\(4\times 4\)</span> matrices
+labeled by antisymmetric index pairs <span class="math notranslate nohighlight">\(\rho\sigma\)</span>. Since the only <span class="math notranslate nohighlight">\(4\times 4\)</span>
+matrices we have to work with are the <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> matrices, it’s not a big
+leap to consider the ansatz</p>
+<div class="math notranslate nohighlight">
+\[
+S^{\mu\nu} = a(\gamma^\mu\gamma^\nu - \gamma^\mu\gamma^\nu) 
+= 2a\gamma^\mu\gamma^\nu, \qquad \mu \ne \nu
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is some to-be-determined constant. Taking the commutator of the
+<span class="math notranslate nohighlight">\(\gamma^\mu\)</span> with this ansatz gives us</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+[\gamma^\mu, S^{\rho\sigma}] &amp;= 2a(\gamma^\mu\gamma^\rho\gamma^\sigma - 
+\gamma^\rho\gamma^\sigma\gamma^\mu) \\[8pt]
+&amp; = 2a (\gamma^\mu\gamma^\rho\gamma^\sigma + \gamma^\rho\gamma^\mu\gamma^\sigma - 
+\gamma^\rho\gamma^\mu\gamma^\sigma - \gamma^\rho\gamma^\sigma\gamma^\mu) \\[8pt]
+&amp; = 2a (\{\gamma^\mu, \gamma^\rho\} \gamma^\sigma - 
+\gamma^\rho\{\gamma^\mu, \gamma^\sigma\}) \\[8pt]
+&amp; = 4a(\eta^{\mu\rho}\gamma^\sigma - \eta^{\mu\sigma}\gamma^\rho)
+\end{aligned}
+\end{split}\]</div>
+<p>In order for our ansatz to match the commutation relation, we need <span class="math notranslate nohighlight">\(a = 1/4\)</span>.
+Therefore,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+S^{\mu\nu} = \frac{1}{4}[\gamma^\mu, \gamma^\nu]
+= \frac{1}{2}(\gamma^\mu\gamma^\nu - \eta^{\mu\nu}) =
+\begin{cases}
+\frac{1}{2}\gamma^\mu\gamma^\nu &amp; \mu\ne\nu \\[8pt]
+0 &amp; \mu = \nu
+\end{cases}
+\end{split}\]</div>
+<p>Sometimes, these matrices are scaled and rechristened</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma^{\mu\nu} = \frac{i}{2} [\gamma^\mu, \gamma^\nu],
+\]</div>
+<p>but I will continue to use <span class="math notranslate nohighlight">\(S^{\mu\nu}\)</span> to avoid confusion with using <span class="math notranslate nohighlight">\(\sigma\)</span>
+as an index. As we can now see, the <span class="math notranslate nohighlight">\(S^{\mu\nu}\)</span> are not the same as the
+<span class="math notranslate nohighlight">\(M^{\mu\nu}\)</span>, thus the transformation matrix for Dirac spinors, while related
+via the <span class="math notranslate nohighlight">\(\omega_{\mu\nu}\)</span>, is not the same as the transformation for
+four-vectors. The <span class="math notranslate nohighlight">\(S^{\mu\nu}\)</span> are known as the generators of the Lorentz
+transformations in the <em>spinor representation</em>.</p>
+<p>The <span class="math notranslate nohighlight">\(S\)</span> matrix is thus constructed as</p>
+<div class="math notranslate nohighlight">
+\[
+S = \exp\left(\frac{1}{4} \omega_{\rho\sigma}\gamma^\rho\gamma^\sigma\right).
+\]</div>
+<p>For a boost in the
+<span class="math notranslate nohighlight">\(r^1 = x\)</span> direction,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+S^{01} = -S^{10} =
+\begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix}
+\end{split}\]</div>
+<p>with the <span class="math notranslate nohighlight">\(S\)</span> matrix taking the form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+S = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
+\gamma^0\gamma^1\sinh\left(\dfrac{\chi}{2}\right) =
+\left(
+\begin{array}{llll}
+a_+ &amp; 0 &amp; 0 &amp; a_- \\
+0 &amp; a_+ &amp; a_- &amp; 0 \\
+0 &amp; a_- &amp; a_+ &amp; 0 \\
+a_- &amp; 0 &amp; 0 &amp; a_+
+\end{array}
+\right)
+\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[
+a_\pm = \pm\sqrt{\frac{\gamma \pm 1}{2}}.
+\]</div>
+<p>For a boost in the general <span class="math notranslate nohighlight">\(\boldsymbol{\hat{\rm n}}\)</span> direction, the <span class="math notranslate nohighlight">\(S\)</span> matrix
+takes the form</p>
+<div class="math notranslate nohighlight">
+\[
+S_{\rm boost} = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
+\gamma^0 (\boldsymbol{\gamma} \cdot \boldsymbol{\hat{\rm n}})
+\sinh\left(\dfrac{\chi}{2}\right)
+\]</div>
+<p>A calculation of the transformation for <span class="math notranslate nohighlight">\(x\)</span>-direction boosts is carried out
+below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gamma_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">gamma_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])[::</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">s_01</span> <span class="o">=</span> <span class="mf">.5</span> <span class="o">*</span> <span class="n">gamma_0</span> <span class="o">@</span> <span class="n">gamma_1</span>
+<span class="c1"># Remember that omega_10 = -omega_01 = chi, hence the minus sign</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">linalg</span><span class="o">.</span><span class="n">expm</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="n">chi</span> <span class="o">*</span> <span class="n">s_01</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1.22474487  0.          0.         -0.70710678]
+ [ 0.          1.22474487 -0.70710678  0.        ]
+ [ 0.         -0.70710678  1.22474487  0.        ]
+ [-0.70710678  0.          0.          1.22474487]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that <span class="math notranslate nohighlight">\(S\)</span> is not, in general, unitary. Taking the hermitian conjugate,</p>
+<div class="math notranslate nohighlight">
+\[
+S^\dagger = \exp\left(
+\frac{1}{4}\omega_{\rho\sigma}(\gamma^\rho\gamma^\sigma)^\dagger
+\right)
+= \exp\left(
+\frac{1}{4}\omega_{\rho\sigma}(\gamma^\sigma)^\dagger(\gamma^\rho)^\dagger
+\right)
+\]</div>
+<p>In our chosen basis, <span class="math notranslate nohighlight">\(\gamma^0\)</span> is hermitian and <span class="math notranslate nohighlight">\(\gamma^i\)</span> are antihermitian.
+Using the anticommutation relations, we can combine these facts to obtain</p>
+<div class="math notranslate nohighlight">
+\[
+(\gamma^\mu)^\dagger = \gamma^0 \gamma^\mu \gamma^0.
+\]</div>
+<p>Then,</p>
+<div class="math notranslate nohighlight">
+\[
+S^\dagger = \exp\left(
+\frac{1}{4}\omega_{\rho\sigma}\gamma^0 \gamma^\sigma \gamma^\rho \gamma^0
+\right)
+= \exp\left(
+-\frac{1}{4}\omega_{\rho\sigma}\gamma^0 \gamma^\rho \gamma^\sigma \gamma^0
+\right)
+\]</div>
+<p>By expanding this as a Taylor series, we can see that</p>
+<div class="math notranslate nohighlight">
+\[
+S^\dagger = \gamma^0 S^{-1} \gamma^0.
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\((\gamma^0)^2 = I_4\)</span>, it follows that</p>
+<div class="math notranslate nohighlight">
+\[
+S^{-1} = \gamma^0 S^\dagger \gamma^0.
+\]</div>
+<p>This means that <span class="math notranslate nohighlight">\(S\)</span> is unitary for rotations <span class="math notranslate nohighlight">\((S^{ij} = \gamma^i\gamma^j/2)\)</span>
+but not for boosts. For rotations by an angle <span class="math notranslate nohighlight">\(\phi\)</span> about an arbitrary axis,
+<span class="math notranslate nohighlight">\(S\)</span> takes the form</p>
+<div class="math notranslate nohighlight">
+\[
+S_{\rm rot} = I_4\cos\left(\frac{\phi}{2}\right) +
+i (\boldsymbol{\Sigma} \cdot \boldsymbol{\hat{\rm n}})\sin\left(\frac{\phi}{2}\right)
+\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boldsymbol{\Sigma} =
+\begin{pmatrix}
+\boldsymbol{\sigma} &amp; 0 \\
+0 &amp; \boldsymbol{\sigma} \\
+\end{pmatrix}
+\end{split}\]</div>
+<p>is the (dimensionless) spin operator. If we rotate a spinor about the
+<span class="math notranslate nohighlight">\(r^3 = z\)</span> axis by an angle <span class="math notranslate nohighlight">\(\omega_{21} = -\omega_{12} = \phi\)</span> then,</p>
+<div class="math notranslate nohighlight">
+\[
+S^{12} = \frac{1}{2}\gamma^1\gamma^2 = -\frac{i}{2} \Sigma^3
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+S = 
+\begin{pmatrix}
+e^{i\phi \sigma^3/2} &amp; 0 \\
+0 &amp; e^{i\phi\sigma^3/2}
+\end{pmatrix}
+= \operatorname{diag}(e^{i\phi/2}, e^{-i\phi/2}, e^{i\phi/2}, e^{-i\phi/2}).
+\end{split}\]</div>
+<p>For a rotation by one full turn, <span class="math notranslate nohighlight">\(\phi = \tau\)</span>, and we get <span class="math notranslate nohighlight">\(S = - I_4\)</span>. So
+rotating a spinor one full turn causes it to pick up a 180° phase shift. This
+is not what happens with a four-vector, as the math below shows that
+<span class="math notranslate nohighlight">\({\Lambda^\mu}_\nu = {\delta^\mu}_\nu\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s_12</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="n">j</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">m_12</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])[::</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">phi</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">tau</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;S = &#39;</span><span class="p">)</span> <span class="c1"># = -I_4 within machine rounding</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">linalg</span><span class="o">.</span><span class="n">expm</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="n">phi</span> <span class="o">*</span> <span class="n">s_12</span><span class="p">),</span> <span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">Lambda = &#39;</span><span class="p">)</span> <span class="c1"># = I_4 within machine rounding</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">linalg</span><span class="o">.</span><span class="n">expm</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="n">phi</span> <span class="o">*</span> <span class="n">m_12</span><span class="p">),</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>S = 
+[[-1.+0.j  0.+0.j  0.+0.j  0.+0.j]
+ [ 0.+0.j -1.-0.j  0.+0.j  0.+0.j]
+ [ 0.+0.j  0.+0.j -1.+0.j  0.+0.j]
+ [ 0.+0.j  0.+0.j  0.+0.j -1.-0.j]]
+
+
+\Lambda = 
+[[ 1.  0.  0.  0.]
+ [ 0.  1. -0.  0.]
+ [ 0.  0.  1.  0.]
+ [ 0.  0.  0.  1.]]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="bilinear-invariants">
+<h2>Bilinear Invariants<a class="headerlink" href="#bilinear-invariants" title="Link to this heading">#</a></h2>
+<p>Now that we have determined <span class="math notranslate nohighlight">\(S\)</span> and its inverse, we can create quantities
+from the bispinor object <span class="math notranslate nohighlight">\(\psi\)</span> that are Lorentz invariant. Since a Lorentz
+transformation changes <span class="math notranslate nohighlight">\(\psi\)</span> according to</p>
+<div class="math notranslate nohighlight">
+\[
+\psi \to S\psi
+\]</div>
+<p>its hermitian conjugate transforms as</p>
+<div class="math notranslate nohighlight">
+\[
+\psi^\dagger \to \psi^\dagger S^\dagger.
+\]</div>
+<p>What we’d like is an object that transforms so that we get an <span class="math notranslate nohighlight">\(S^{-1}\)</span> on the
+right hand side that will cancel the <span class="math notranslate nohighlight">\(S\)</span> that comes from transforming <span class="math notranslate nohighlight">\(\psi\)</span>.
+Since <span class="math notranslate nohighlight">\(S^{-1} = \gamma^0 S^\dagger \gamma^0\)</span>, we see that the quantity
+<span class="math notranslate nohighlight">\(\psi^\dagger\gamma^0\)</span> transforms as</p>
+<div class="math notranslate nohighlight">
+\[
+\psi^\dagger\gamma^0 \to \psi^\dagger S^\dagger\gamma^0
+= \psi^\dagger \gamma^0 \gamma^0 S^\dagger\gamma^0
+= \psi^\dagger \gamma^0 S^{-1}.
+\]</div>
+<p>Defining <span class="math notranslate nohighlight">\(\bar\psi = \psi^\dagger\gamma^0\)</span> as the <em>Dirac adjoint</em>, we find that
+the quantity <span class="math notranslate nohighlight">\(\bar{\psi}\psi\)</span> is Lorentz invariant:</p>
+<div class="math notranslate nohighlight">
+\[
+\bar{\psi}\psi \to \bar{\psi}S^{-1} S\psi = \bar{\psi}\psi
+\]</div>
+<p>With the Dirac adjoint, <span class="math notranslate nohighlight">\(\psi\)</span>, and the <span class="math notranslate nohighlight">\(\gamma^\mu\)</span>, we can construct all the
+possible Lorentz invariant quantities formed from a bispinor. For instance, if
+we consider the object <span class="math notranslate nohighlight">\(\bar{\psi}\gamma^\mu\psi\)</span>, we find that</p>
+<div class="math notranslate nohighlight">
+\[
+\bar{\psi}\gamma^\mu\psi \to \bar{\psi}S^{-1}\gamma^\mu S\psi
+= {\Lambda^\mu}_\nu \bar{\psi}\gamma^\nu\psi,
+\]</div>
+<p>which is the transformation rule for a four-vector! All told, there are five
+bilinear Lorentz invariant objects we can construct:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left\{
+\begin{array}{lll}
+(1) &amp; \bar\psi\psi &amp; \text{scalar} \\
+(2) &amp; \bar\psi\gamma^5\psi &amp; \text{pseudoscalar} \\
+(3) &amp; \bar\psi\gamma^\mu\psi &amp; \text{vector} \\
+(4) &amp; \bar\psi\gamma^\mu\gamma^5\psi &amp; \text{pseudovector} \\
+(5) &amp; \bar\psi S^{\mu\nu}\psi &amp; \text{antisymmetric tensor}
+\end{array}
+\right\}
+\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\gamma^5 \equiv i\gamma^0\gamma^1\gamma^2\gamma^3 =
+\begin{pmatrix}
+0 &amp; 1 \\
+1 &amp; 0
+\end{pmatrix}.
+\end{split}\]</div>
+<p>In total there are sixteen unique numbers among these invariant objects –
+as many as could possibly be made out <span class="math notranslate nohighlight">\(4\times 4\)</span> matrices. What’s rather
+remarkable about these quantities is that you can tell at a glance what kind of
+object each invariant is, despite the fact that the indices for <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> are
+not four-vector components – they are an index that tells you which of four
+matrices to pick – and yet when sandwiched between <span class="math notranslate nohighlight">\(\bar\psi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> end up
+being the tensor your gut tells you they are.</p>
+<p>Another way to put this is that <em>any</em> <span class="math notranslate nohighlight">\(4\times 4\)</span> matrix can be made of a linear
+combination of <span class="math notranslate nohighlight">\(I_4, \gamma^5, \gamma^\mu, \gamma^\mu \gamma^5,\)</span> and
+<span class="math notranslate nohighlight">\(S^{\mu\nu}\)</span>. As an example,
+<span class="math notranslate nohighlight">\(\eta^{\mu\nu}=2(\gamma^\mu\gamma^\nu-S^{\mu\nu})\)</span>.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="exercises">
+<h1>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Starting with the Lorentz invariance of the Dirac equation,
+$<span class="math notranslate nohighlight">\(
+i\hbar\gamma^\mu\partial_\mu\psi - mc\psi
+\to i\hbar\gamma^\mu\partial'_\mu\psi' - mc\psi',
+\)</span><span class="math notranslate nohighlight">\(
+derive the rule \)</span>S^{-1}\gamma^\mu S = {\Lambda^\mu}_\nu \gamma^\nu$.</p></li>
+<li><p>Show that <span class="math notranslate nohighlight">\(S^\dagger S \ne I_4\)</span> for a boost in the <span class="math notranslate nohighlight">\(x\)</span>-direction. What
+happens to your result in the nonrelativistic limit <span class="math notranslate nohighlight">\(v \ll c\)</span>?</p></li>
+<li><p>Show that <span class="math notranslate nohighlight">\(\gamma^0 S^\dagger \gamma^0 = S^{-1}\)</span> for a boost in the
+<span class="math notranslate nohighlight">\(x\)</span>-direction.</p></li>
+<li><p>Prove that <span class="math notranslate nohighlight">\(\sigma^{ij} = \varepsilon^{ijk}\Sigma^{k}\)</span>, where
+$<span class="math notranslate nohighlight">\(
+\varepsilon^{ijk} =
+\begin{cases}
+1 &amp; ijk = 123 \text{ or } 231 \text{ or } 312,\\
+ -1 &amp; ijk = 132 \text{ or } 321 \text{ or } 213,\\
+0 &amp; \text{otherwise}
+\end{cases}
+\)</span>$
+is the Levi-Civita symbol.</p></li>
+<li><p>Show that <span class="math notranslate nohighlight">\(\gamma^5\)</span> anticommutes with all the gamma matrices, i.e.
+<span class="math notranslate nohighlight">\(\{\gamma^5, \gamma^\mu\} = \gamma^5\gamma^\mu + \gamma^\mu\gamma^5 = 0\)</span>.</p></li>
+<li><p>(a) Prove that
+<span class="math notranslate nohighlight">\([H, \mathbf{L}] = i\hbar c \gamma^0 (\boldsymbol{\gamma}\times \mathbf{p})\)</span>,
+which shows that <span class="math notranslate nohighlight">\(\mathbf{L}\)</span> is not a conserved quantity for a Dirac spinor.
+<br>
+(b) Prove that
+<span class="math notranslate nohighlight">\([H, \mathbf{S}] = -i\hbar c \gamma^0 
+(\boldsymbol{\gamma}\times \mathbf{p})\)</span>, where
+<span class="math notranslate nohighlight">\(\mathbf{S} = \frac{\hbar}{2}\boldsymbol{\Sigma}\)</span>, and thus the sum
+<span class="math notranslate nohighlight">\(\mathbf{J} = \mathbf{L} + \mathbf{S}\)</span> is conserved for a Dirac spinor.</p></li>
+<li><p>Find the form of the <span class="math notranslate nohighlight">\(S\)</span> matrix for a rotation about the <span class="math notranslate nohighlight">\(x\)</span>-axis by
+calculating the appropriate <span class="math notranslate nohighlight">\(S^{\mu\nu}\)</span> and exponentiating it. Put your
+answer in terms of <span class="math notranslate nohighlight">\(a_\pm\)</span>. (Note: be sure to sum repeated indices or you
+will end up with factor-of-two errors!)</p></li>
+</ol>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./qm-book\_build\jupyter_execute\qm-book\_build\jupyter_execute\qm-book\_build\jupyter_execute"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Lorentz Invariance of the Dirac Equation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bilinear-invariants">Bilinear Invariants</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alexander Chartrand
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
