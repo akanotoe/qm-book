@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Lorentz Invariance of the Dirac Equation &#8212; Quantum Mechanics</title>
+    <title>3. Lorentz Invariance of the Dirac Equation &#8212; Quantum Mechanics</title>
   
   
   
@@ -62,7 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '02-lorentz-invariance-of-dirac-eqn';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Relativistic Quantum Mechanics" href="01-the-dirac-equation.html" />
+    <link rel="prev" title="2. Relativistic Quantum Mechanics" href="01-the-dirac-equation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,10 +178,9 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01-the-dirac-equation.html">Relativistic Quantum Mechanics</a></li>
-
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lorentz Invariance of the Dirac Equation</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="the-schrodinger-eqn.html">1. The Schrödinger Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-the-dirac-equation.html">2. Relativistic Quantum Mechanics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Lorentz Invariance of the Dirac Equation</a></li>
 </ul>
 
     </div>
@@ -377,13 +376,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Lorentz Invariance of the Dirac Equation</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bilinear-invariants">Bilinear Invariants</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bilinear-invariants">3.1. Bilinear Invariants</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">3.2. Exercises</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -395,7 +390,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lorentz-invariance-of-the-dirac-equation">
-<h1>Lorentz Invariance of the Dirac Equation<a class="headerlink" href="#lorentz-invariance-of-the-dirac-equation" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3. </span>Lorentz Invariance of the Dirac Equation<a class="headerlink" href="#lorentz-invariance-of-the-dirac-equation" title="Link to this heading">#</a></h1>
 <p>Since we derived the Dirac equation using a relativistic relationship,
 it should remain invariant under Lorentz transformations, i.e. boosts and
 rotations. Let’s act agnostic to the fact that <span class="math notranslate nohighlight">\(\psi\)</span> is not a four-vector,
@@ -742,7 +737,7 @@ S^{01} = -S^{10} = \dfrac{1}{2}
 \end{split}\]</div>
 <p>with the <span class="math notranslate nohighlight">\(S\)</span> matrix taking the form</p>
 <div class="math notranslate nohighlight" id="equation-eq-boostx">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-boostx" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-eq-boostx" title="Link to this equation">#</a></span>\[\begin{split}
 S = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
 \gamma^0\gamma^1\sinh\left(\dfrac{\chi}{2}\right) =
 \left(
@@ -761,8 +756,8 @@ a_\pm = \pm\sqrt{\frac{\gamma \pm 1}{2}}.
 \]</div>
 <p>For a boost in the general <span class="math notranslate nohighlight">\(\boldsymbol{\hat{\rm n}}\)</span> direction, the <span class="math notranslate nohighlight">\(S\)</span> matrix
 takes the form</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq-boostn">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-eq-boostn" title="Link to this equation">#</a></span>\[
 S_{\rm boost} = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
 \gamma^0 (\boldsymbol{\gamma} \cdot \boldsymbol{\hat{\rm n}})
 \sinh\left(\dfrac{\chi}{2}\right)
@@ -892,7 +887,7 @@ is not what happens with a four-vector, as the math below shows that
 </div>
 </div>
 <section id="bilinear-invariants">
-<h2>Bilinear Invariants<a class="headerlink" href="#bilinear-invariants" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.1. </span>Bilinear Invariants<a class="headerlink" href="#bilinear-invariants" title="Link to this heading">#</a></h2>
 <p>Now that we have determined <span class="math notranslate nohighlight">\(S\)</span> and its inverse, we can create quantities
 from the bispinor object <span class="math notranslate nohighlight">\(\psi\)</span> that are Lorentz invariant. Since a Lorentz
 transformation changes <span class="math notranslate nohighlight">\(\psi\)</span> according to</p>
@@ -964,9 +959,8 @@ combination of <span class="math notranslate nohighlight">\(I_4, \gamma^5, \gamm
 <span class="math notranslate nohighlight">\(S^{\mu\nu}\)</span>. As an example,
 <span class="math notranslate nohighlight">\(\eta^{\mu\nu}=2(\gamma^\mu\gamma^\nu-S^{\mu\nu})\)</span>.</p>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="exercises">
-<h1>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
+<section id="exercises">
+<h2><span class="section-number">3.2. </span>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
 <ol class="arabic">
 <li><p>Starting with the Lorentz invariance of the Dirac equation,</p>
 <div class="math notranslate nohighlight">
@@ -977,7 +971,7 @@ combination of <span class="math notranslate nohighlight">\(I_4, \gamma^5, \gamm
 <p>derive the rule <span class="math notranslate nohighlight">\(S^{-1}\gamma^\mu S = {\Lambda^\mu}_\nu \gamma^\nu\)</span>.</p>
 </li>
 <li><p>Show that <span class="math notranslate nohighlight">\(S^\dagger S \ne I_4\)</span> for a boost in the <span class="math notranslate nohighlight">\(x\)</span>-direction
-(Eq. <a class="reference internal" href="#equation-eq-boostx">()</a>). What happens to your result in the nonrelativistic
+(Eq. <a class="reference internal" href="#equation-eq-boostx">(3.1)</a>). What happens to your result in the nonrelativistic
 limit <span class="math notranslate nohighlight">\(v \ll c\)</span>?</p></li>
 <li><p>Show that <span class="math notranslate nohighlight">\(\gamma^0 S^\dagger \gamma^0 = S^{-1}\)</span> for a boost in the
 <span class="math notranslate nohighlight">\(x\)</span>-direction.</p></li>
@@ -996,8 +990,8 @@ limit <span class="math notranslate nohighlight">\(v \ll c\)</span>?</p></li>
 <li><p>(a) Show that <span class="math notranslate nohighlight">\(\gamma^5\)</span> anticommutes with all the gamma matrices, i.e.
 <span class="math notranslate nohighlight">\(\{\gamma^5, \gamma^\mu\} = \gamma^5\gamma^\mu + \gamma^\mu\gamma^5 = 0\)</span>.
 <br>
-(b) Show that <span class="math notranslate nohighlight">\(\gamma^0\gamma^i = \gamma^5 \Sigma^i\)</span>, so that in the Dirac
-basis the formula for Lorentz boosts can be rewritten</p>
+(b) Show that <span class="math notranslate nohighlight">\(\gamma^0\gamma^i = \gamma^5 \Sigma^i\)</span>, so that
+the formula for Lorentz boosts (Eq. <a class="reference internal" href="#equation-eq-boostn">(3.2)</a>) can be rewritten</p>
 <div class="math notranslate nohighlight">
 \[
    S_{\rm boost} = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
@@ -1019,6 +1013,7 @@ calculating the appropriate <span class="math notranslate nohighlight">\(S^{\mu\
 answer in terms of <span class="math notranslate nohighlight">\(a_\pm\)</span>. (Note: be sure to sum repeated indices or you
 will end up with factor-of-two errors!)</p></li>
 </ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1057,7 +1052,7 @@ will end up with factor-of-two errors!)</p></li>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Relativistic Quantum Mechanics</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Relativistic Quantum Mechanics</p>
       </div>
     </a>
 </div>
@@ -1076,13 +1071,9 @@ will end up with factor-of-two errors!)</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Lorentz Invariance of the Dirac Equation</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bilinear-invariants">Bilinear Invariants</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bilinear-invariants">3.1. Bilinear Invariants</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">3.2. Exercises</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>

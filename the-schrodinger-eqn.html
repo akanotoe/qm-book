@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2. Relativistic Quantum Mechanics &#8212; Quantum Mechanics</title>
+    <title>1. The Schrödinger Equation &#8212; Quantum Mechanics</title>
   
   
   
@@ -59,11 +59,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '01-the-dirac-equation';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'the-schrodinger-eqn';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3. Lorentz Invariance of the Dirac Equation" href="02-lorentz-invariance-of-dirac-eqn.html" />
-    <link rel="prev" title="1. The Schrödinger Equation" href="the-schrodinger-eqn.html" />
+    <link rel="next" title="2. Relativistic Quantum Mechanics" href="01-the-dirac-equation.html" />
+    <link rel="prev" title="Quantum Mechanics" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,8 +179,8 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="the-schrodinger-eqn.html">1. The Schrödinger Equation</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Relativistic Quantum Mechanics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. The Schrödinger Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-the-dirac-equation.html">2. Relativistic Quantum Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02-lorentz-invariance-of-dirac-eqn.html">3. Lorentz Invariance of the Dirac Equation</a></li>
 </ul>
 
@@ -253,7 +253,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F01-the-dirac-equation.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fthe-schrodinger-eqn.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -283,7 +283,7 @@
       
       
       
-      <li><a href="_sources/01-the-dirac-equation.ipynb" target="_blank"
+      <li><a href="_sources/the-schrodinger-eqn.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -367,7 +367,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Relativistic Quantum Mechanics</h1>
+    <h1>The Schrödinger Equation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -377,9 +377,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-klein-gordon-equation">2.1. The Klein-Gordon Equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dirac-equation">2.2. The Dirac Equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">2.3. Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-wave-function">1.1. The Wave Function</a></li>
 </ul>
             </nav>
         </div>
@@ -391,198 +389,77 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="relativistic-quantum-mechanics">
-<h1><span class="section-number">2. </span>Relativistic Quantum Mechanics<a class="headerlink" href="#relativistic-quantum-mechanics" title="Link to this heading">#</a></h1>
-<p>Nonrelativistic quantum mechanics follows the Schrödinger Equation,</p>
-<div class="math notranslate nohighlight">
-\[
-i\hbar \dfrac{\partial\Psi}{\partial t} = -\dfrac{\hbar^2}{2m}\nabla^2\Psi + V\Psi.
-\]</div>
-<p>The reason this equation is nonrelativistic is because space and time are treated unequally.
-In the language of differential equations, it is <em>first</em> order in time and <em>second</em> order in space.
-A truly relativistic equation would put time and space on equal footing.</p>
-<section id="the-klein-gordon-equation">
-<h2><span class="section-number">2.1. </span>The Klein-Gordon Equation<a class="headerlink" href="#the-klein-gordon-equation" title="Link to this heading">#</a></h2>
-<p>To get a relativistic quantum mechanical equation, we can take the relativistic
-energy-momentum relation,</p>
-<div class="math notranslate nohighlight">
-\[
-E^2 - p^2c^2 = (mc^2)^2
-\]</div>
-<p>and apply the quantum mechanical prescription</p>
-<div class="math notranslate nohighlight">
-\[
-E\to i\hbar \dfrac{\partial}{\partial t}, \quad p\to -i\hbar\boldsymbol{\nabla},
-\]</div>
-<p>where we’re just working in the free particle case (<span class="math notranslate nohighlight">\(V(\mathbf{r}) = 0\)</span>). This
-gets us the Klein-Gordon equation</p>
-<div class="math notranslate nohighlight">
-\[
- -\hbar^2\dfrac{\partial^2\Psi}{\partial t^2} + \hbar^2c^2\nabla^2\Psi = (mc^2)^2\Psi.
-\]</div>
-<p>Rearranging constants yields</p>
-<div class="math notranslate nohighlight">
-\[
-\dfrac{1}{c^2}\dfrac{\partial^2\Psi}{\partial t^2} - \nabla^2\Psi =
-\left(\dfrac{mc}{\hbar}\right)^2\Psi.
-\]</div>
-<p>This is an inhomogeneous wave equation. Schrödinger actually discovered this
-before the equation that bears his name, but abandoned it after it failed to
-predict the energy levels of the hydrogen atom. It turns out that the
-Klein-Gordon equation models spin-0 quantum objects, which was not useful
-for modeling the spin-1/2 electron.</p>
-</section>
-<section id="the-dirac-equation">
-<h2><span class="section-number">2.2. </span>The Dirac Equation<a class="headerlink" href="#the-dirac-equation" title="Link to this heading">#</a></h2>
-<p>For the aforementioned reason and others, Dirac wanted to find an equation that
-was <em>first</em> order in space and time. The question he sought to answer was how to
-take the square root of the relativistic energy-momentum relation. In
-four-vector notation,</p>
-<div class="math notranslate nohighlight">
-\[
-p_\mu p^\mu - (mc)^2 = 0,
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(p_\mu\)</span> is the covariant momentum 4-vector and <span class="math notranslate nohighlight">\(p^\mu\)</span> is the
-contravariant momentum four-vector, related by</p>
-<div class="math notranslate nohighlight">
-\[
-p_\mu = \eta_{\mu\nu}p^\nu
-\]</div>
-<p>with the Minkowski metric
-<span class="math notranslate nohighlight">\(\eta_{\mu\nu} = \eta^{\mu\nu} = \operatorname{diag}(1, -1, -1, -1)\)</span>,
-and repeated indices are summed. Dirac tried factoring this equation by
-analogy to a difference in squares,</p>
-<div class="math notranslate nohighlight">
-\[
-p_\mu p^\mu - (mc)^2 = (\beta^\kappa p_\kappa + mc)
-(\gamma^\lambda p_\lambda - mc)
-\]</div>
-<p>with <span class="math notranslate nohighlight">\(\beta^\kappa\)</span> and <span class="math notranslate nohighlight">\(\gamma^\lambda\)</span> as coefficients to be determined.
-Carrying out the multiplication, we get</p>
-<div class="math notranslate nohighlight">
-\[
-p_\mu p^\mu - (mc)^2 =
-\beta^\kappa\gamma^\lambda p_\kappa p_\lambda + 
-(\gamma^\kappa - \beta^\kappa) p_\kappa mc - (mc)^2.
-\]</div>
-<p>Since there are no terms linear in <span class="math notranslate nohighlight">\(p_\mu\)</span> in the relativistic
-energy-momentum relation, <span class="math notranslate nohighlight">\(\beta^\kappa = \gamma^\kappa\)</span>. This means that</p>
-<div class="math notranslate nohighlight">
-\[
-\gamma^\kappa \gamma^\lambda p_\kappa p_\lambda = p_\mu p^\mu.
-\]</div>
-<p>Since there are no mixed indices leftover, all mixed index terms must vanish,
-i.e.</p>
-<div class="math notranslate nohighlight">
-\[
-\gamma^\mu \gamma^\nu + \gamma^\nu\gamma^\mu = 0, \qquad \mu \ne\nu
-\]</div>
-<p>and all squared terms must equal <span class="math notranslate nohighlight">\(1\)</span> or <span class="math notranslate nohighlight">\(-1\)</span>. In fact,</p>
-<div class="math notranslate nohighlight">
-\[
-(\gamma^0)^2 = 1, \qquad (\gamma^1)^2 = (\gamma^2)^2 = (\gamma^3)^2 = -1.
-\]</div>
-<p>However, there are no numbers that obey these relations. Dirac had the insight
-to treat these not as numbers, but as matrices, which don’t commute and could
-follow the above relation. As matrices, the <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> follow the succinct
-relation</p>
-<div class="math notranslate nohighlight" id="equation-eq-gamma-anticommutation">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-gamma-anticommutation" title="Link to this equation">#</a></span>\[
-\{\gamma^\mu, \gamma^\nu\} = 2\eta^{\mu\nu},
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(\{A, B\} = AB + BA\)</span> is the <em>anticommutator</em> of matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> and
-there is an implied identity matrix of appropriate size after <span class="math notranslate nohighlight">\(\eta^{\mu\nu}\)</span>.
-It turns out that the smallest matrices that obey these anticommutator relations
-are <span class="math notranslate nohighlight">\(4\times 4\)</span>. In the Dirac basis, these matrices are</p>
-<div class="math notranslate nohighlight" id="equation-eq-gamma-def">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-eq-gamma-def" title="Link to this equation">#</a></span>\[\begin{split}
-\gamma^0 =
-\begin{pmatrix}
-1 &amp; 0\\ 0 &amp; -1
-\end{pmatrix}, \qquad
-\gamma^i =
-\begin{pmatrix}
-0 &amp; \sigma^i\\ -\sigma^i &amp; 0
-\end{pmatrix}
-\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\sigma^i (i = 1, 2, 3)\)</span> are the Pauli matrices,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\sigma^1 = 
-\begin{pmatrix}
-0 &amp; 1 \\ 1 &amp; 0
-\end{pmatrix}, \qquad
-\sigma^2 = 
-\begin{pmatrix}
-0 &amp; -i \\ i &amp; 0
-\end{pmatrix}, \qquad
-\sigma^3 = 
-\begin{pmatrix}
-1 &amp; 0 \\ 0 &amp; -1
-\end{pmatrix},
-\end{split}\]</div>
-<p>and each entry in the gamma matrices is a <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix, with <span class="math notranslate nohighlight">\(1\)</span>
-representing the identity matrix and <span class="math notranslate nohighlight">\(0\)</span> representing a matrix of zeros.</p>
-<p>The energy-momentum relation now reads</p>
-<div class="math notranslate nohighlight" id="equation-eq-dirac-diff-sq">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-dirac-diff-sq" title="Link to this equation">#</a></span>\[
-p_\mu p^\mu - (mc)^2 = (\gamma^\mu p_\mu + mc)(\gamma^\mu p_\mu - mc) = 0.
-\]</div>
-<p>By convention, the second factor in the middle expression of
-Eq. <a class="reference internal" href="#equation-eq-dirac-diff-sq">(2.3)</a> is taken to be the Dirac equation,</p>
-<div class="math notranslate nohighlight">
-\[
-(\gamma^\mu p_\mu - mc) = 0.
-\]</div>
-<p>Now we apply the quantum prescription, which in 4-vector notation is</p>
-<div class="math notranslate nohighlight">
-\[
-p_\mu = i\hbar \partial_\mu
-\]</div>
-<p>where we define the 4-gradient</p>
-<div class="math notranslate nohighlight">
-\[
-\partial_\mu \equiv \dfrac{\partial}{\partial r^\mu} = (\partial_0, \boldsymbol\nabla)
-\]</div>
-<p>or, to be explicit about the components,</p>
-<div class="math notranslate nohighlight">
-\[
-\partial_0 = \dfrac{1}{c}\dfrac{\partial}{\partial t},\qquad
-\partial_1 = \dfrac{\partial}{\partial x},\qquad
-\partial_2 = \dfrac{\partial}{\partial y},\qquad
-\partial_3 = \dfrac{\partial}{\partial z}.
-\]</div>
-<p>Acting this differential operator on the wave function <span class="math notranslate nohighlight">\(\psi\)</span>, we get
-the Dirac equation,</p>
-<div class="math notranslate nohighlight">
-\[
-i\hbar\gamma^\mu \partial_\mu \psi - mc\psi = 0.
-\]</div>
-<p>Because the <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> matrices are <span class="math notranslate nohighlight">\(4\times 4\)</span> matrices, <span class="math notranslate nohighlight">\(\psi\)</span> must
-be a four-component column matrix,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\psi =
-\begin{pmatrix}
-\psi_1\\ \psi_2\\ \psi_3\\ \psi_4\\ 
-\end{pmatrix}.
-\end{split}\]</div>
-<p>This object is known as a <em>Dirac spinor</em> or a <em>bispinor</em>. It turns out that
-it is <em>not</em> a four-vector, which will be covered in the next section.</p>
-</section>
-<section id="exercises">
-<h2><span class="section-number">2.3. </span>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-schrodinger-equation">
+<h1><span class="section-number">1. </span>The Schrödinger Equation<a class="headerlink" href="#the-schrodinger-equation" title="Link to this heading">#</a></h1>
+<p>Nonrelativistic quantum mechanics follows from two principles:</p>
 <ol class="arabic">
-<li><p>Show that <span class="math notranslate nohighlight">\(\gamma^0 \gamma^i\)</span> is Hermitian for <span class="math notranslate nohighlight">\(i = 1, 2, 3\)</span>.</p></li>
-<li><p>Using the equation</p>
-<div class="math notranslate nohighlight">
-\[
-   i\hbar\frac{\partial}{\partial t}\psi = \hat{H}\psi,
+<li><p>Matter behaves like a wave with a wavelength given by the de Broglie
+wavelength,</p>
+<div class="math notranslate nohighlight" id="equation-eq-debroglie-wl">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-eq-debroglie-wl" title="Link to this equation">#</a></span>\[
+   \lambda = \frac{h}{p} = \hbar k.
    \]</div>
-<p>get an expression for
-the Hamiltonian of the Dirac equation.</p>
+</li>
+<li><p>Energy is quantized according to the Planck relation</p>
+<div class="math notranslate nohighlight" id="equation-eq-planck-rel">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-eq-planck-rel" title="Link to this equation">#</a></span>\[
+   E = hf = \hbar\omega.
+   \]</div>
 </li>
 </ol>
+<p>Here <span class="math notranslate nohighlight">\(\lambda\)</span> is the wavelength, <span class="math notranslate nohighlight">\(f\)</span> is the wave frequency, <span class="math notranslate nohighlight">\(p\)</span> is the wave’s momentum, <span class="math notranslate nohighlight">\(E\)</span> is its energy,</p>
+<div class="math notranslate nohighlight" id="equation-eq-planck-const">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-eq-planck-const" title="Link to this equation">#</a></span>\[
+h = 6.626\ 070\ 15\times 10^{-34}~{\rm J\, s}
+\]</div>
+<p>is Planck’s constant, and</p>
+<div class="math notranslate nohighlight">
+\[
+\hbar = \frac{h}{2\pi} = \frac{h}{\tau} \approx 1.054\ 572\times10^{-34}~{\rm J\, s}
+\]</div>
+<p>is the reduced Planck constant. If matter behaves like a wave, there must be a wave equation that it obeys. Consider a wave in one dimension. The simplest form it can have is that of a plane wave,<a class="footnote-reference brackets" href="#plane-waves" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<div class="math notranslate nohighlight" id="equation-eq-matter-plane-wave">
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-eq-matter-plane-wave" title="Link to this equation">#</a></span>\[
+\Psi(x, t) = Ae^{i(kx-\omega t)}.
+\]</div>
+<p>To get a wave equation, we want to take derivatives with respect to position and time and relate them to each other in analogy to the classical wave equation,</p>
+<div class="math notranslate nohighlight" id="equation-eq-classical-wave">
+<span class="eqno">(1.5)<a class="headerlink" href="#equation-eq-classical-wave" title="Link to this equation">#</a></span>\[
+\frac{1}{v^2} \frac{\partial^2 \Psi}{\partial t^2} =
+\frac{\partial^2 \Psi}{\partial x^2},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(v\)</span> is the speed of the wave. For our matter wave, let’s look at what we get when we take derivatives of <span class="math notranslate nohighlight">\(\Psi\)</span>. First, taking the time derivative, we get</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial\Psi}{\partial t} = -i\omega Ae^{i(kx-\omega t)} = \frac{\omega}{i} \Psi(x,t) = \frac{E}{i\hbar}\Psi(x, t),
+\]</div>
+<p>where I used the Planck relation to get the last expression. Taking the <span class="math notranslate nohighlight">\(x\)</span>-derivative of our matter wave and invoking the de Broglie relation gives</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial\Psi}{\partial x} = ik Ae^{i(kx-\omega t)} = ik\Psi(x, t) = \frac{ip}{\hbar}\Psi(x,t).
+\]</div>
+<p>To relate these derivatives to each other, we invoke the classical definition of the total energy,</p>
+<div class="math notranslate nohighlight">
+\[
+E = T + V = \frac{1}{2}mv^2 + V = \frac{p^2}{2m} + V,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(T\)</span> is the <strong>kinetic energy</strong>, <span class="math notranslate nohighlight">\(V\)</span> is the <strong>potential energy</strong>,  and <span class="math notranslate nohighlight">\(m\)</span> is the mass of our object behaving like a wave (e.g. an electron). Putting this together and replacing <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(p\)</span> with their derivative counterparts, we get</p>
+<div class="math notranslate nohighlight" id="equation-eq-schrodinger-eqn">
+<span class="eqno">(1.6)<a class="headerlink" href="#equation-eq-schrodinger-eqn" title="Link to this equation">#</a></span>\[
+\boxed{
+i\hbar \frac{\partial\Psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2\Psi}{\partial x^2} + V\Psi.}
+\]</div>
+<p>This is the Schrödinger equation. The function that describes the matter wave, which we’ve called <span class="math notranslate nohighlight">\(\Psi\)</span>, is the <strong>wave function</strong>.</p>
+<section id="the-wave-function">
+<h2><span class="section-number">1.1. </span>The Wave Function<a class="headerlink" href="#the-wave-function" title="Link to this heading">#</a></h2>
+<p>This function possesses all the information we could possibly know about the object it describes.</p>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="plane-waves" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>If restricting ourselves to one type of wave bothers you, don’t fret. As with classical waves, matter waves can be constructed by the principle of <em>superposition</em>, so that we can add together plane waves of different frequencies to create almost arbitrary wave shapes.</p>
+</aside>
+</aside>
 </section>
 </section>
 
@@ -617,20 +494,20 @@ the Hamiltonian of the Dirac equation.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="the-schrodinger-eqn.html"
+       href="intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>The Schrödinger Equation</p>
+        <p class="prev-next-title">Quantum Mechanics</p>
       </div>
     </a>
     <a class="right-next"
-       href="02-lorentz-invariance-of-dirac-eqn.html"
+       href="01-the-dirac-equation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Lorentz Invariance of the Dirac Equation</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Relativistic Quantum Mechanics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -650,9 +527,7 @@ the Hamiltonian of the Dirac equation.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-klein-gordon-equation">2.1. The Klein-Gordon Equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dirac-equation">2.2. The Dirac Equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">2.3. Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-wave-function">1.1. The Wave Function</a></li>
 </ul>
   </nav></div>
 
