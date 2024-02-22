@@ -401,41 +401,13 @@ Lorentz transformations,</p>
 \psi\to \psi' = S\psi.
 \]</div>
 <p>Note that <span class="math notranslate nohighlight">\(S\)</span> must be some <span class="math notranslate nohighlight">\(4\times 4\)</span> matrix for <span class="math notranslate nohighlight">\(\psi\)</span> to maintain its
-form as a column matrix with four entries. Recall that four-vectors transform
-according to</p>
+form as a column matrix with four entries. If <span class="math notranslate nohighlight">\(\psi\)</span> were a four-vector, then
+<span class="math notranslate nohighlight">\(S = \Lambda\)</span>. We will see, however, that this is not the case. First, we apply
+a Lorentz transformation to the Dirac equation assuming that <span class="math notranslate nohighlight">\(S\)</span> is the matrix
+that transforms <span class="math notranslate nohighlight">\(\psi\)</span>. Since <span class="math notranslate nohighlight">\(\partial_\mu\)</span> is <em>covariant</em>,</p>
 <div class="math notranslate nohighlight">
 \[
-r'^\mu = {\Lambda^\mu}_\nu r^\nu
-\]</div>
-<p>where <span class="math notranslate nohighlight">\({\Lambda^\mu}_\nu\)</span> is the standard Lorentz transformation matrix. For
-boosts in the <span class="math notranslate nohighlight">\(r^1 = x\)</span> direction, <span class="math notranslate nohighlight">\(\Lambda\)</span> takes the form</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{equation}
-\Lambda = 
-\begin{pmatrix}
-\gamma &amp; -\gamma\beta &amp; 0 &amp; 0 \\
--\gamma\beta &amp; \gamma &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 1 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; 1
-\end{pmatrix}
-\end{equation}
-\end{split}\]</div>
-<p>yielding</p>
-<div class="math notranslate nohighlight">
-\[
-ct' = \gamma (ct - \beta x), \qquad
-x' = \gamma (x - \beta ct), \qquad
-y' = y, \qquad
-z' = z.
-\]</div>
-<p>If <span class="math notranslate nohighlight">\(\psi\)</span> were a four-vector, then <span class="math notranslate nohighlight">\(S = \Lambda\)</span>. We will see, however,
-that this is not the case. First, we apply a Lorentz transformation to the
-Dirac equation assuming that <span class="math notranslate nohighlight">\(S\)</span> is the matrix that transforms <span class="math notranslate nohighlight">\(\psi\)</span>. Since
-<span class="math notranslate nohighlight">\(\partial_\mu\)</span> is covariant,</p>
-<div class="math notranslate nohighlight">
-\[
-\partial'_\mu = {(\Lambda^{-1})^\nu}_\mu \partial_\nu
+\partial'_\mu = {(\Lambda^{-1})^\nu}_\mu \partial_\nu.
 \]</div>
 <!-- Putting all this into the Dirac equation gives us
 
@@ -506,7 +478,7 @@ define the matrix in parentheses as</p>
 \]</div>
 <p>Thus, <span class="math notranslate nohighlight">\((M^{\rho\sigma})^{\mu\nu}\)</span> represents 6 different matrices (denoted by
 the pair <span class="math notranslate nohighlight">\(\rho\sigma\)</span>) which are <span class="math notranslate nohighlight">\(4\times 4\)</span> whose matrix elements are denoted
-by the pair <span class="math notranslate nohighlight">\(\mu\nu\)</span>. When contracted with the <span class="math notranslate nohighlight">\(\omega_{\rho\sigma}\)</span> constants,
+by the pair <span class="math notranslate nohighlight">\(\mu\nu\)</span>. When contracted with <span class="math notranslate nohighlight">\(\omega_{\rho\sigma}\)</span>,
 we get the infinitesimal Lorentz transformation</p>
 <div class="math notranslate nohighlight">
 \[
@@ -522,8 +494,16 @@ we get the infinitesimal Lorentz transformation</p>
 <span class="math notranslate nohighlight">\({\omega^\mu}_\nu\)</span> has been extracted to the <span class="math notranslate nohighlight">\({(M^{\rho\sigma})^\mu}_\nu\)</span> now) which tell
 us what kind of Lorentz transformation we’re applying with <span class="math notranslate nohighlight">\(\Lambda\)</span>. The
 <span class="math notranslate nohighlight">\(M^{\rho\sigma}\)</span> matrices are known as the <em>generators</em> of the Lorentz
-transformations.</p>
-<p>As an example of how this plays out, a boost in the <span class="math notranslate nohighlight">\(x\)</span>-direction has
+transformations. In the language of Lie groups, the generators form a Clifford
+algebra described by their commutator:</p>
+<div class="math notranslate nohighlight" id="equation-eq-commutator-ms">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-eq-commutator-ms" title="Link to this equation">#</a></span>\[
+[M^{\rho\sigma}, M^{\mu\nu}] = \eta^{\rho\nu}M^{\mu\sigma}
+ - \eta^{\sigma\nu}M^{\rho\mu} + \eta^{\mu\sigma}M^{\rho\nu}
+ - \eta^{\rho\mu}M^{\sigma\nu},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\([A, B] = AB - BA\)</span>.
+As an example of how this plays out, a boost in the <span class="math notranslate nohighlight">\(x\)</span>-direction has
 <span class="math notranslate nohighlight">\(\omega_{10} = -\omega_{01} = \chi = \tanh^{-1}(\beta)\)</span>, with <span class="math notranslate nohighlight">\(\beta = v/c\)</span> and
 <span class="math notranslate nohighlight">\(\chi\)</span> being the <strong>rapidity</strong>, a relativistic quantity derived from the speed.
 In fact, it’s not hard to show that</p>
@@ -661,17 +641,15 @@ matrices now reads</p>
 <p>Looking at terms linear in <span class="math notranslate nohighlight">\(\omega_{\rho\sigma}\)</span> on each side and equating
 them yields</p>
 <div class="math notranslate nohighlight">
-\[
-(\gamma^\mu S^{\rho\sigma} - S^{\rho\sigma}\gamma^\mu) =
+\[\begin{split}
+\begin{aligned}
+(\gamma^\mu S^{\rho\sigma} - S^{\rho\sigma}\gamma^\mu) &amp;=
  {(M^{\rho\sigma})^\mu}_\nu\gamma^\nu = 
  (\eta^{\mu\rho}{\delta^\sigma}_\nu - \eta^{\mu\sigma}{\delta^\rho}_\nu)
-\gamma^\nu
-\]</div>
-<p>Defining the commutator of two matrices to be <span class="math notranslate nohighlight">\([A, B] = AB - BA\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[
-[\gamma^\mu, S^{\rho\sigma}] = \eta^{\mu\rho}\gamma^\sigma - \eta^{\mu\sigma}\gamma^\rho.
-\]</div>
+\gamma^\nu \\[8pt]
+[\gamma^\mu, S^{\rho\sigma}] &amp;= \eta^{\mu\rho}\gamma^\sigma - \eta^{\mu\sigma}\gamma^\rho.
+\end{aligned}
+\end{split}\]</div>
 <p>At this point, all we need to do is find a set of <span class="math notranslate nohighlight">\(4\times 4\)</span> matrices
 labeled by antisymmetric index pairs <span class="math notranslate nohighlight">\(\rho\sigma\)</span>. Since the only <span class="math notranslate nohighlight">\(4\times 4\)</span>
 matrices we have to work with are the <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> matrices, it’s not a big
@@ -737,7 +715,7 @@ S^{01} = -S^{10} = \dfrac{1}{2}
 \end{split}\]</div>
 <p>with the <span class="math notranslate nohighlight">\(S\)</span> matrix taking the form</p>
 <div class="math notranslate nohighlight" id="equation-eq-boostx">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-eq-boostx" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-eq-boostx" title="Link to this equation">#</a></span>\[\begin{split}
 S = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
 \gamma^0\gamma^1\sinh\left(\dfrac{\chi}{2}\right) =
 \left(
@@ -757,7 +735,7 @@ a_\pm = \pm\sqrt{\frac{\gamma \pm 1}{2}}.
 <p>For a boost in the general <span class="math notranslate nohighlight">\(\boldsymbol{\hat{\rm n}}\)</span> direction, the <span class="math notranslate nohighlight">\(S\)</span> matrix
 takes the form</p>
 <div class="math notranslate nohighlight" id="equation-eq-boostn">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-eq-boostn" title="Link to this equation">#</a></span>\[
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-eq-boostn" title="Link to this equation">#</a></span>\[
 S_{\rm boost} = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
 \gamma^0 (\boldsymbol{\gamma} \cdot \boldsymbol{\hat{\rm n}})
 \sinh\left(\dfrac{\chi}{2}\right)
@@ -769,13 +747,19 @@ below.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gamma_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">gamma_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])[::</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
 <span class="n">s_01</span> <span class="o">=</span> <span class="mf">.5</span> <span class="o">*</span> <span class="n">gamma_0</span> <span class="o">@</span> <span class="n">gamma_1</span>
+<span class="n">aplus</span> <span class="o">=</span> <span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">cosh</span><span class="p">(</span><span class="n">chi</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">.5</span>
+<span class="n">aminus</span> <span class="o">=</span> <span class="o">-</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">cosh</span><span class="p">(</span><span class="n">chi</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;a_+ = </span><span class="si">{</span><span class="n">aplus</span><span class="si">:</span><span class="s1">.8f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;a_- = </span><span class="si">{</span><span class="n">aminus</span><span class="si">:</span><span class="s1">.8f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="c1"># Remember that omega_10 = -omega_01 = chi, hence the minus sign</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">linalg</span><span class="o">.</span><span class="n">expm</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="n">chi</span> <span class="o">*</span> <span class="n">s_01</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1.22474487  0.          0.         -0.70710678]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a_+ = 1.22474487
+a_- = -0.70710678
+[[ 1.22474487  0.          0.         -0.70710678]
  [ 0.          1.22474487 -0.70710678  0.        ]
  [ 0.         -0.70710678  1.22474487  0.        ]
  [-0.70710678  0.          0.          1.22474487]]
@@ -971,10 +955,19 @@ combination of <span class="math notranslate nohighlight">\(I_4, \gamma^5, \gamm
 <p>derive the rule <span class="math notranslate nohighlight">\(S^{-1}\gamma^\mu S = {\Lambda^\mu}_\nu \gamma^\nu\)</span>.</p>
 </li>
 <li><p>Show that <span class="math notranslate nohighlight">\(S^\dagger S \ne I_4\)</span> for a boost in the <span class="math notranslate nohighlight">\(x\)</span>-direction
-(Eq. <a class="reference internal" href="#equation-eq-boostx">(3.1)</a>). What happens to your result in the nonrelativistic
+(Eq. <a class="reference internal" href="#equation-eq-boostx">(3.2)</a>). What happens to your result in the nonrelativistic
 limit <span class="math notranslate nohighlight">\(v \ll c\)</span>?</p></li>
-<li><p>Show that <span class="math notranslate nohighlight">\(\gamma^0 S^\dagger \gamma^0 = S^{-1}\)</span> for a boost in the
-<span class="math notranslate nohighlight">\(x\)</span>-direction.</p></li>
+<li><p>(a) Use hyperbolic function identities to prove that
+$<span class="math notranslate nohighlight">\(
+a_+ = \cosh\left(\frac{\chi}{2}\right),\qquad 
+a_- = -\sinh\left(\frac{\chi}{2}\right)
+\)</span><span class="math notranslate nohighlight">\(
+for positive \)</span>\chi<span class="math notranslate nohighlight">\(.
+&lt;br&gt;
+(b) Show that \)</span>\gamma^0 S^\dagger \gamma^0 = S^{-1}<span class="math notranslate nohighlight">\( for a boost in the
+\)</span>x$-direction.</p></li>
+<li><p>Carry out the matrix multiplication <span class="math notranslate nohighlight">\(S\psi\)</span> for a boost in the <span class="math notranslate nohighlight">\(x\)</span>-direction.
+Which elements get mixed? Which elements do not get mixed?</p></li>
 <li><p>Prove that <span class="math notranslate nohighlight">\(\sigma^{ij} = \varepsilon^{ijk}\Sigma^{k}\)</span>, where</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -991,7 +984,7 @@ limit <span class="math notranslate nohighlight">\(v \ll c\)</span>?</p></li>
 <span class="math notranslate nohighlight">\(\{\gamma^5, \gamma^\mu\} = \gamma^5\gamma^\mu + \gamma^\mu\gamma^5 = 0\)</span>.
 <br>
 (b) Show that <span class="math notranslate nohighlight">\(\gamma^0\gamma^i = \gamma^5 \Sigma^i\)</span>, so that
-the formula for Lorentz boosts (Eq. <a class="reference internal" href="#equation-eq-boostn">(3.2)</a>) can be rewritten</p>
+the formula for Lorentz boosts (Eq. <a class="reference internal" href="#equation-eq-boostn">(3.3)</a>) can be rewritten</p>
 <div class="math notranslate nohighlight">
 \[
    S_{\rm boost} = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
@@ -1001,17 +994,27 @@ the formula for Lorentz boosts (Eq. <a class="reference internal" href="#equatio
 </li>
 <li><p>(a) Prove that
 <span class="math notranslate nohighlight">\([H, \mathbf{L}] = i\hbar c \gamma^0 (\boldsymbol{\gamma}\times \mathbf{p})\)</span>,
-which shows that <span class="math notranslate nohighlight">\(\mathbf{L}\)</span> is not a conserved quantity for a Dirac spinor.
+where</p>
+<div class="math notranslate nohighlight">
+\[
+   \mathbf{L} = \mathbf{r} \times \mathbf{p}
+   \]</div>
+<p>is the orbital angular momentum operator. This demonstrates that <span class="math notranslate nohighlight">\(\mathbf{L}\)</span>
+is not a conserved quantity for a Dirac spinor.
 <br>
 (b) Prove that
 <span class="math notranslate nohighlight">\([H, \mathbf{S}] = -i\hbar c \gamma^0 
 (\boldsymbol{\gamma}\times \mathbf{p})\)</span>, where
 <span class="math notranslate nohighlight">\(\mathbf{S} = \frac{\hbar}{2}\boldsymbol{\Sigma}\)</span>, and thus the sum
-<span class="math notranslate nohighlight">\(\mathbf{J} = \mathbf{L} + \mathbf{S}\)</span> is conserved for a Dirac spinor.</p></li>
-<li><p>Find the form of the <span class="math notranslate nohighlight">\(S\)</span> matrix for a rotation about the <span class="math notranslate nohighlight">\(x\)</span>-axis by
+<span class="math notranslate nohighlight">\(\mathbf{J} = \mathbf{L} + \mathbf{S}\)</span> is conserved for a Dirac spinor.</p>
+</li>
+<li><p>(a) Find the form of the <span class="math notranslate nohighlight">\(S\)</span> matrix for a boost in the <span class="math notranslate nohighlight">\(z\)</span>-direction by
 calculating the appropriate <span class="math notranslate nohighlight">\(S^{\mu\nu}\)</span> and exponentiating it. Put your
 answer in terms of <span class="math notranslate nohighlight">\(a_\pm\)</span>. (Note: be sure to sum repeated indices or you
-will end up with factor-of-two errors!)</p></li>
+will end up with factor-of-two errors!)
+<br>
+(b) Find the form of the <span class="math notranslate nohighlight">\(S\)</span> matrix for a rotation about the <span class="math notranslate nohighlight">\(x\)</span>-axis by
+calculating the appropriate <span class="math notranslate nohighlight">\(S^{\mu\nu}\)</span> and exponentiating it.</p></li>
 </ol>
 </section>
 </section>
