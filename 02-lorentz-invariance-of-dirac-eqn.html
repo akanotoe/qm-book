@@ -235,7 +235,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/akanotoe/qm-book" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -252,7 +252,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F02-lorentz-invariance-of-dirac-eqn.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/akanotoe/qm-book/issues/new?title=Issue%20on%20page%20%2F02-lorentz-invariance-of-dirac-eqn.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -486,27 +486,32 @@ we get the infinitesimal Lorentz transformation</p>
 \frac{1}{2}\omega_{\rho\sigma} {(M^{\rho\sigma})^\mu}_\nu
 \]</div>
 <p>which, for finite transformations, becomes</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq-lt-expmat">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-eq-lt-expmat" title="Link to this equation">#</a></span>\[
 \Lambda = \exp\left(\frac{1}{2}\omega_{\rho\sigma}M^{\rho\sigma}\right).
 \]</div>
-<p>Here, <span class="math notranslate nohighlight">\(\omega_{\rho\sigma}\)</span> are a set of constants (the matrix behavior of
-<span class="math notranslate nohighlight">\({\omega^\mu}_\nu\)</span> has been extracted to the <span class="math notranslate nohighlight">\({(M^{\rho\sigma})^\mu}_\nu\)</span> now) which tell
-us what kind of Lorentz transformation we’re applying with <span class="math notranslate nohighlight">\(\Lambda\)</span>. The
-<span class="math notranslate nohighlight">\(M^{\rho\sigma}\)</span> matrices are known as the <em>generators</em> of the Lorentz
-transformations. In the language of Lie groups, the generators form a Clifford
-algebra described by their commutator:</p>
+<p>What are <span class="math notranslate nohighlight">\(\omega_{\rho\sigma}\)</span>? I won’t prove it (you get to <a class="reference internal" href="#ex-omega-rs"><span class="std std-ref">in the
+Exercises</span></a>), but they are a set of constants which tell
+us what kind of Lorentz transformation we’re applying with <span class="math notranslate nohighlight">\(\Lambda\)</span>.
+The matrix aspect of <span class="math notranslate nohighlight">\({\omega^\mu}_\nu\)</span> has been extracted to the
+<span class="math notranslate nohighlight">\({(M^{\rho\sigma})^\mu}_\nu\)</span> matrices, which are known as the
+<em>generators</em> of the Lorentz transformations. In the language of Lie
+groups, the generators form a <em>Clifford algebra</em> described by their
+commutator:</p>
 <div class="math notranslate nohighlight" id="equation-eq-commutator-ms">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-eq-commutator-ms" title="Link to this equation">#</a></span>\[
-[M^{\rho\sigma}, M^{\mu\nu}] = \eta^{\rho\nu}M^{\mu\sigma}
- - \eta^{\sigma\nu}M^{\rho\mu} + \eta^{\mu\sigma}M^{\rho\nu}
- - \eta^{\rho\mu}M^{\sigma\nu},
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-eq-commutator-ms" title="Link to this equation">#</a></span>\[
+[M^{\rho\sigma}, M^{\mu\nu}] =
+\eta^{\rho\nu}M^{\sigma\mu}
+ - \eta^{\rho\mu}M^{\sigma\nu}
+ + \eta^{\sigma\mu}M^{\rho\nu}
+ - \eta^{\sigma\nu}M^{\rho\mu}
+ ,
 \]</div>
-<p>where <span class="math notranslate nohighlight">\([A, B] = AB - BA\)</span>.
-As an example of how this plays out, a boost in the <span class="math notranslate nohighlight">\(x\)</span>-direction has
-<span class="math notranslate nohighlight">\(\omega_{10} = -\omega_{01} = \chi = \tanh^{-1}(\beta)\)</span>, with <span class="math notranslate nohighlight">\(\beta = v/c\)</span> and
-<span class="math notranslate nohighlight">\(\chi\)</span> being the <strong>rapidity</strong>, a relativistic quantity derived from the speed.
-In fact, it’s not hard to show that</p>
+<p>where <span class="math notranslate nohighlight">\([A, B] = AB - BA\)</span>. As an example of generating <span class="math notranslate nohighlight">\(\Lambda\)</span> from
+the <span class="math notranslate nohighlight">\(M^{\rho\sigma}\)</span>, a boost in the <span class="math notranslate nohighlight">\(x\)</span>-direction has <span class="math notranslate nohighlight">\(\omega_{10} =
+-\omega_{01} = \chi = \tanh^{-1}(\beta)\)</span>, with <span class="math notranslate nohighlight">\(\beta = v/c\)</span> and the
+quantity <span class="math notranslate nohighlight">\(\chi\)</span> being the <strong>rapidity</strong>, a relativistic quantity
+derived from the speed. In fact, it can be shown that</p>
 <div class="math notranslate nohighlight">
 \[
 \cosh(\chi) = \gamma, \qquad \sinh(\chi) = \gamma\beta.
@@ -715,7 +720,7 @@ S^{01} = -S^{10} = \dfrac{1}{2}
 \end{split}\]</div>
 <p>with the <span class="math notranslate nohighlight">\(S\)</span> matrix taking the form</p>
 <div class="math notranslate nohighlight" id="equation-eq-boostx">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-eq-boostx" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-eq-boostx" title="Link to this equation">#</a></span>\[\begin{split}
 S = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
 \gamma^0\gamma^1\sinh\left(\dfrac{\chi}{2}\right) =
 \left(
@@ -735,7 +740,7 @@ a_\pm = \pm\sqrt{\frac{\gamma \pm 1}{2}}.
 <p>For a boost in the general <span class="math notranslate nohighlight">\(\boldsymbol{\hat{\rm n}}\)</span> direction, the <span class="math notranslate nohighlight">\(S\)</span> matrix
 takes the form</p>
 <div class="math notranslate nohighlight" id="equation-eq-boostn">
-<span class="eqno">(3.3)<a class="headerlink" href="#equation-eq-boostn" title="Link to this equation">#</a></span>\[
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-eq-boostn" title="Link to this equation">#</a></span>\[
 S_{\rm boost} = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
 \gamma^0 (\boldsymbol{\gamma} \cdot \boldsymbol{\hat{\rm n}})
 \sinh\left(\dfrac{\chi}{2}\right)
@@ -945,7 +950,9 @@ combination of <span class="math notranslate nohighlight">\(I_4, \gamma^5, \gamm
 </section>
 <section id="exercises">
 <h2><span class="section-number">3.2. </span>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
-<ol class="arabic">
+<ol class="arabic" id="ex-omega-rs">
+<li><p>Prove that <span class="math notranslate nohighlight">\(\omega_{10} = -\omega_{01} = \chi\)</span> for a boost in the
+<span class="math notranslate nohighlight">\(x\)</span>-direction.</p></li>
 <li><p>Starting with the Lorentz invariance of the Dirac equation,</p>
 <div class="math notranslate nohighlight">
 \[
@@ -955,7 +962,7 @@ combination of <span class="math notranslate nohighlight">\(I_4, \gamma^5, \gamm
 <p>derive the rule <span class="math notranslate nohighlight">\(S^{-1}\gamma^\mu S = {\Lambda^\mu}_\nu \gamma^\nu\)</span>.</p>
 </li>
 <li><p>Show that <span class="math notranslate nohighlight">\(S^\dagger S \ne I_4\)</span> for a boost in the <span class="math notranslate nohighlight">\(x\)</span>-direction
-(Eq. <a class="reference internal" href="#equation-eq-boostx">(3.2)</a>). What happens to your result in the nonrelativistic
+(Eq. <a class="reference internal" href="#equation-eq-boostx">(3.3)</a>). What happens to your result in the nonrelativistic
 limit <span class="math notranslate nohighlight">\(v \ll c\)</span>?</p></li>
 <li><p>(a) Use hyperbolic function identities to prove that
 $<span class="math notranslate nohighlight">\(
@@ -984,7 +991,7 @@ Which elements get mixed? Which elements do not get mixed?</p></li>
 <span class="math notranslate nohighlight">\(\{\gamma^5, \gamma^\mu\} = \gamma^5\gamma^\mu + \gamma^\mu\gamma^5 = 0\)</span>.
 <br>
 (b) Show that <span class="math notranslate nohighlight">\(\gamma^0\gamma^i = \gamma^5 \Sigma^i\)</span>, so that
-the formula for Lorentz boosts (Eq. <a class="reference internal" href="#equation-eq-boostn">(3.3)</a>) can be rewritten</p>
+the formula for Lorentz boosts (Eq. <a class="reference internal" href="#equation-eq-boostn">(3.4)</a>) can be rewritten</p>
 <div class="math notranslate nohighlight">
 \[
    S_{\rm boost} = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
@@ -1100,7 +1107,7 @@ By Alexander Chartrand
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>
