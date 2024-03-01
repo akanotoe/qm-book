@@ -7,5 +7,8 @@ options:
   numbered: true
 chapters:
 - file: the-schrodinger-eqn.ipynb
-- file: 01-the-dirac-equation.ipynb
-- file: 02-lorentz-invariance-of-dirac-eqn.ipynb
+- file: 00-relativistic-qm.md
+  sections:
+  - file: 00-special-relativity.md
+  - file: 01-the-dirac-equation.ipynb
+  - file: 02-lorentz-invariance-of-dirac-eqn.ipynb
