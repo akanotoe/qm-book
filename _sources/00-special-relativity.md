@@ -1,4 +1,4 @@
-# Special Relativity
+## Special Relativity
 Einstein's Special Theory of Relativity follows from two postulates:
 1. The laws of physics are the same in all inertial (non-accelerating)
    reference frames.
