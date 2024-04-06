@@ -19,7 +19,7 @@ problem for classical physics, since the classical relativity, or
 
 $$
 v_{\rm rel} = v_1 - v_2
-$$
+$$ (eq:rel-vel-gal)
 for the relative velocity $v_{\rm rel}$ between two objects moving at
 speeds $v_1$ and $v_2$. For instance, if two cars are driving down the
 highway at speeds $v_1 = 25~{\rm m/s}$ and $v_2 = 30~{\rm m/s}$ in the
@@ -41,13 +41,13 @@ rock are seen in the Galilean paradigm as
 
 $$
 t' = t,\qquad x' = x-vt.
-$$
-The first equation seems like a tautology – of course the rock's time looks no different in the moving frame! However, due to the
-invariance of the speed of light with respect change in reference
-frame, we have to challenge this assumption. Since the invariant thing
-is a *speed*, we have to consider that a change to a position to a
-change in reference frame must be compensated by a change in temporal
-position, or, if you prefer, a change in clock reading.
+$$ (eq:galilean-transformations)
+The first equation seems like a tautology – of course the rock's time looks no 
+different in the moving frame! However, due to the invariance of the speed of 
+light with respect change in reference frame, we have to challenge this 
+assumption. Since the invariant thing is a *speed*, we have to consider that a 
+change to a position to a change in reference frame must be compensated by a 
+change in temporal position, or, if you prefer, a change in clock reading. 
 <!-- Insert light clock argument! -->
 Consider a **light clock** – an object that bounces a short pulse of
 light between two mirrors set a certain distance $L$ apart which
@@ -110,30 +110,80 @@ a fraction of the length of a bacterium. It's only when an object approaches a
 significant fraction of the speed of light that these effects are noticeable.
 
 Using these relationships of lengths and time intervals between rest frame and
-lab frame, we can transform coordinates between the two frames.
+lab frame, we can transform coordinates between the two frames. Let's consider 
+the light clock on its side and track the rightmost side of the light clock as
+being at coordinates (t, x) in  the lab frame $\mathcal{S}$ while it has the
+coordinates $(t', x')$ in the frame $\mathcal{S}'$ moving with the light clock 
+at velocity $v$ in the $+x$-direction. By this logic,
 
 $$
-r'^\mu = {\Lambda^\mu}_\nu r^\nu
-$$ (eq:4-vec-transform)
-where ${\Lambda^\mu}_\nu$ is the standard Lorentz transformation
-matrix. For boosts in the $r^1 = x$ direction, $\Lambda$ takes the
-form
+L = x',\qquad L' = x-vt.
+$$
+So, using the equation for length contraction,
 
 $$
-\Lambda =
-\begin{pmatrix}
-\gamma & -\gamma\beta & 0 & 0 \\
--\gamma\beta & \gamma & 0 & 0 \\
-0 & 0 & 1 & 0\\
-0 & 0 & 0 & 1
-\end{pmatrix}
-$$ (eq:lorentz-boost-x)
-with $\gamma$ as the standard Lorentz factor. Carrying out the matrix
-multiplication yields the set of transformations
+x' = \gamma(x-vt).
+$$
+The inverse transformation arises from letting $\mathcal{S}'$ be the stationary
+frame, causing frame $\mathcal{S}$ to travel at speed $v$ in the $-x$-direction.
 
 $$
-ct' = \gamma (ct - \beta x), \qquad
-x' = \gamma (x - \beta ct), \qquad
-y' = y, \qquad
-z' = z,
+L' = x' + vt', \qquad L = x,
 $$
+resulting in
+
+$$
+x = \gamma(x' + vt').
+$$
+Note the symmetry here: swapping primes with unprimed coordinates picks up a
+minus sign for the velocity, as it should. Length contraction and time dilation
+occur regardless of what direction an object is traveling, so there should be
+no preference in the coordinate transformation for one direction versus
+another. Putting these transformations together, we have
+
+$$
+\boxed{
+   \begin{array}{cl}
+   \hspace{1pt}\\[-4pt]
+   ({\rm i}) & x' = \gamma(x-vt) \\[12pt]
+   ({\rm ii}) & y' = y \\[12pt]
+   ({\rm iii}) & z' = z \\[12pt]
+   ({\rm iv}) & t' = \gamma\left(t-\dfrac{vx}{c^2}\right). \\[-4pt]
+   \hspace{1pt}
+   \end{array}
+}
+$$ (eq:lorentz-transformations)
+These are the **Lorentz transformations** of special relativity. Note that,
+when $v \ll c$, $\gamma\to 1$ and these reduce to the Galilean relationship 
+(Eq. [](eq:galilean-transformations)). Also, dimensions perpendicular to the
+direction of motion do not get contracted.
+
+### Implications of Lorentz Transformations
+
+#### Relativity of Simultaneity
+   Consider two events that are simultaneous in the lab frame $\mathcal{S}$ but
+   take place at two different $x$ coordinates. By the transformation equation
+   for time, each event will have different $t'$ coordinates. Thus, in frame
+   $\mathcal{S}'$, those events will not be simultaneous. The conclusion is
+   that *simultaneous events in one frame will not be simultaneous in another*.
+
+#### Einstein Velocity Addition
+An object moving in frame $\mathcal{S}$ at velocity
+
+$$
+u = \frac{dx}{dt}
+$$
+has a velocity in frame $\mathcal{S}'$ of
+
+$$
+u' = \frac{dx'}{dt'} = \frac{\gamma(dx - vdt)}{\gamma(dt - vdx/c^2)}
+   = \frac{u - v}{1-uv/c^2}.
+$$ (eq:einstein-vel)
+This is the **Einstein velocity addition rule**. Note that if $u = c$,
+
+$$
+u' = \frac{c - v}{1-cv/c^2} = c \left(\frac{1 - v/c}{1 - v/c}\right) = c,
+$$
+preserving the invariance of the speed of light. When $u \ll c$ and $v \ll c$, 
+we recover the relative velocity of Galilean relativity (Eq. 
+[](eq:rel-vel-gal)).
