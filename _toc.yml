@@ -10,5 +10,6 @@ chapters:
 - file: 00-relativistic-qm.md
   sections:
   - file: 00-special-relativity.md
+  - file: 01 four-vectors.md
   - file: 01-the-dirac-equation.ipynb
   - file: 02-lorentz-invariance-of-dirac-eqn.ipynb
