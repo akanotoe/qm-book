@@ -118,6 +118,86 @@ $$
 {\Lambda^\mu}_\rho {\Lambda^\nu}_\sigma T^{\rho\sigma}.
 $$
 
+#### Momentum 4-vector
+Velocity in special relativity follows the Einstein velocity addition rule
+(Eq. [](eq:einstein-vel)), which means that velocity is not a four-vector. What
+is needed is either a distance or a time which can be agreed upon by all
+inertial reference frames. If you are moving with some velocity $u$ relative to
+Earth, the clock on your wall reads time in the *lab frame*, while the watch on
+your wrist reads your **proper time**,
+
+$$
+d\tau = \sqrt{1-u^2/c^2}dt.
+$$ (eq:proper-time)
+The lab time depends on your speed $u$, but everyone can use the equations for
+Lorentz transformations to determine your proper time. Thus, proper time is an
+*invariant*. This means that the quantity
+
+$$
+w^\mu = \frac{dr^\mu}{d\tau}
+$$
+transforms as a four-vector,
+
+$$
+{w'}^\mu = {\Lambda^\mu}_\nu w^\nu.
+$$
+We call $w^\mu$ the **proper velocity** four-vector. Its zeroth (temporal)
+component is
+
+$$
+w^0 = \frac{dr^0}{d\tau} = c\frac{dt}{d\tau} = \gamma c
+$$
+and its inner product with itself is
+
+$$
+w^\mu w_\mu = \gamma^2(c^2 - v^2) = c^2
+$$
+which is invariant (as it should be!). The momentum four-vector is mass times
+proper velocity:
+
+$$
+p^\mu = m w^\mu = \gamma m
+\begin{pmatrix}
+c \\ u_x \\ u_y \\ u_z
+\end{pmatrix}.
+$$
+Defining $p^0 = E/c$ as the relativistic energy (divided by $c$), we get
+
+$$
+p^\mu =
+\begin{pmatrix}
+E/c \\ p_x \\ p_y \\ p_z
+\end{pmatrix}
+$$
+with
+
+$$
+E = \gamma mc^2.
+$$
+When an object is at rest, the energy is nonzero. We define the rest energy as
+
+$$
+E_{\rm rest} = mc^2.
+$$
+The **kinetic energy** is the total energy minus the rest energy,
+
+$$
+E_{\rm kin} = E - mc^2 = (\gamma - 1)mc^2.
+$$
+Note that in the nonrelativistic limit, the kinetic energy is
+
+$$
+E_{\rm kin} = \left(1 + \frac{1}{2}\frac{v^2}{c^2} +\ldots -1 \right) mc^2 =
+\frac{1}{2}mv^2
+$$
+which matches the classical kinetic energy. Additionally, the inner product of
+the momentum four-vector with itself is
+
+$$
+p^\mu p_\mu = \left(\frac{E}{c}\right)^2 - p^2 = (mc)^2,
+$$
+which is known as the **relativistic energy-momentum relation**.
+
 [^superscript]: Here superscripts are an index rather than an exponent. In
 special relativity, we have to be explicit about exponents vs. upper indices.
 
