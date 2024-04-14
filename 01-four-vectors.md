@@ -83,7 +83,8 @@ if we have two events in spacetime separated in time by $\Delta t$ and in space
 by $\Delta \mathbf{r}$, we get the quantity known as the **spacetime interval**
 
 $$
-(\Delta s)^2 = (c\Delta t)^2 - (\Delta \mathbf{r})^2,
+(\Delta s)^2 = (c\Delta t)^2 - (\Delta \mathbf{r})^2 = (c\Delta t)^2 -
+(\Delta x)^2 - (\Delta y)^2 - (\Delta z)^2,
 $$
 where the sign of $\Delta s$ describes how the two events are separated.
 
@@ -125,8 +126,8 @@ $$
 a_\mu = \eta_{\mu\nu} a^\nu,
 $$
 which has its spatial components (1, 2, 3) flipped in sign but the temporal
-component preserved. Note that under Lorentz transformations, it has the
-transformation rule
+component preserved. Note that under Lorentz transformations, covariant vectors
+transform according to the rule
 
 $$
 a'_\nu = \eta_{\rho\nu}{\Lambda^\rho}_\sigma \eta^{\mu\sigma} a_\mu =
@@ -145,8 +146,8 @@ four-vectors. Because the index is repeated in the inner product, and that the
 upperness of the first vector cancels with the lowerness of the second, we end
 up with a *scalar product* (one component). The combination $a^\mu b^\nu$,
 which neither repeats indices nor mixes upper and lower indices, is a
-second-rank **tensor** ($T^{\mu\nu}$) since there is no repeated index. This
-object transforms as
+second-rank **tensor** ($T^{\mu\nu}$) which is *contravariant* in both indices.
+This object transforms as
 
 $$
 {a'}^\mu{b'}^\nu = ({\Lambda^\mu}_\rho a^\rho) ({\Lambda^\nu}_\sigma b^\sigma)=
