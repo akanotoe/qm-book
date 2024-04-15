@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2.2. The Klein-Gordon Equation &#8212; Quantum Mechanics</title>
+    <title>Four-vectors &#8212; Quantum Mechanics</title>
   
   
   
@@ -59,11 +59,9 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '01-the-dirac-equation';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '01-four-vectors';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2.4. Lorentz Invariance of the Dirac Equation" href="02-lorentz-invariance-of-dirac-eqn.html" />
-    <link rel="prev" title="2.1. Special Relativity" href="00-special-relativity.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,6 +123,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -178,11 +178,11 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="the-schrodinger-eqn.html">1. The Schrödinger Equation</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-relativistic-qm.html">2. Relativistic Quantum Mechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="00-relativistic-qm.html">2. Relativistic Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="00-special-relativity.html">2.1. Special Relativity</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.2. The Klein-Gordon Equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-the-dirac-equation.html">2.2. The Klein-Gordon Equation</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="02-lorentz-invariance-of-dirac-eqn.html">2.4. Lorentz Invariance of the Dirac Equation</a></li>
 
@@ -260,7 +260,7 @@
       
       
       
-      <li><a href="https://github.com/akanotoe/qm-book/issues/new?title=Issue%20on%20page%20%2F01-the-dirac-equation.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/akanotoe/qm-book/issues/new?title=Issue%20on%20page%20%2F01-four-vectors.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -290,7 +290,7 @@
       
       
       
-      <li><a href="_sources/01-the-dirac-equation.ipynb" target="_blank"
+      <li><a href="_sources/01-four-vectors.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -300,7 +300,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -374,7 +374,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>The Klein-Gordon Equation</h1>
+    <h1>Four-vectors</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -384,8 +384,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2.2. The Klein-Gordon Equation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dirac-equation">2.3. The Dirac Equation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Four-vectors</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-metric">The Metric</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-4-vector">Momentum 4-vector</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -398,174 +401,282 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="the-klein-gordon-equation">
-<h1><span class="section-number">2.2. </span>The Klein-Gordon Equation<a class="headerlink" href="#the-klein-gordon-equation" title="Link to this heading">#</a></h1>
-<p>To get a relativistic quantum mechanical equation, we can take the relativistic
-energy-momentum relation,</p>
+  <section id="four-vectors">
+<h1>Four-vectors<a class="headerlink" href="#four-vectors" title="Link to this heading">#</a></h1>
+<p>We can simplify the Lorentz transformations by defining the
+quantities<a class="footnote-reference brackets" href="#superscript" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight">
 \[
-E^2 - p^2c^2 = (mc^2)^2
+r^0 = ct, \qquad r^1 = x, \qquad r^2 = y, \qquad r^3 = z,
+\qquad \beta = \frac{v}{c}.
 \]</div>
-<p>and apply the quantum mechanical prescription</p>
+<p>Note that <span class="math notranslate nohighlight">\(ct\)</span> is the distance light travels in <span class="math notranslate nohighlight">\(t\)</span> units of time. By reframing
+time in terms of distance, we can express the Lorentz transformations as</p>
 <div class="math notranslate nohighlight">
-\[
-E\to i\hbar \dfrac{\partial}{\partial t}, \quad p\to -i\hbar\boldsymbol{\nabla},
-\]</div>
-<p>where we’re just working in the free particle case (<span class="math notranslate nohighlight">\(V(\mathbf{r}) = 0\)</span>). This
-gets us the Klein-Gordon equation</p>
+\[\begin{split}
+\left.
+\begin{array}{l}
+{r'}^0 = \gamma(r^0 - \beta r^1)\\[8pt]
+{r'}^1 = \gamma(r^1 - \beta r^0)\\[8pt]
+{r'}^2 = r^2 \\[8pt]
+{r'}^3 = r^3.
+\end{array}
+\right\}
+\end{split}\]</div>
+<p>Putting this in matrix form, we get</p>
 <div class="math notranslate nohighlight">
-\[
- -\hbar^2\dfrac{\partial^2\Psi}{\partial t^2} + \hbar^2c^2\nabla^2\Psi = (mc^2)^2\Psi.
-\]</div>
-<p>Rearranging constants yields</p>
-<div class="math notranslate nohighlight">
-\[
-\dfrac{1}{c^2}\dfrac{\partial^2\Psi}{\partial t^2} - \nabla^2\Psi =
-\left(\dfrac{mc}{\hbar}\right)^2\Psi.
-\]</div>
-<p>This is an inhomogeneous wave equation. Schrödinger actually discovered this
-before the equation that bears his name, but abandoned it after it failed to
-predict the energy levels of the hydrogen atom. It turns out that the
-Klein-Gordon equation models spin-0 quantum objects, which was not useful
-for modeling the spin-1/2 electron.</p>
-</section>
-<section id="the-dirac-equation">
-<h1><span class="section-number">2.3. </span>The Dirac Equation<a class="headerlink" href="#the-dirac-equation" title="Link to this heading">#</a></h1>
-<p>For the aforementioned reason and others, Dirac wanted to find an equation that
-was <em>first</em> order in space and time. The question he sought to answer was how to
-take the square root of the relativistic energy-momentum relation. In
-four-vector notation,</p>
-<div class="math notranslate nohighlight">
-\[
-p_\mu p^\mu - (mc)^2 = 0,
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(p_\mu\)</span> is the covariant momentum 4-vector and <span class="math notranslate nohighlight">\(p^\mu\)</span> is the
-contravariant momentum four-vector, related by</p>
-<div class="math notranslate nohighlight">
-\[
-p_\mu = \eta_{\mu\nu}p^\nu
-\]</div>
-<p>with the Minkowski metric
-<span class="math notranslate nohighlight">\(\eta_{\mu\nu} = \eta^{\mu\nu} = \operatorname{diag}(1, -1, -1, -1)\)</span>,
-and repeated indices are summed. Dirac tried factoring this equation by
-analogy to a difference in squares,</p>
-<div class="math notranslate nohighlight">
-\[
-p_\mu p^\mu - (mc)^2 = (\beta^\kappa p_\kappa + mc)
-(\gamma^\lambda p_\lambda - mc)
-\]</div>
-<p>with <span class="math notranslate nohighlight">\(\beta^\kappa\)</span> and <span class="math notranslate nohighlight">\(\gamma^\lambda\)</span> as coefficients to be determined.
-Carrying out the multiplication, we get</p>
-<div class="math notranslate nohighlight">
-\[
-p_\mu p^\mu - (mc)^2 =
-\beta^\kappa\gamma^\lambda p_\kappa p_\lambda + 
-(\gamma^\kappa - \beta^\kappa) p_\kappa mc - (mc)^2.
-\]</div>
-<p>Since there are no terms linear in <span class="math notranslate nohighlight">\(p_\mu\)</span> in the relativistic
-energy-momentum relation, <span class="math notranslate nohighlight">\(\beta^\kappa = \gamma^\kappa\)</span>. This means that</p>
-<div class="math notranslate nohighlight">
-\[
-\gamma^\kappa \gamma^\lambda p_\kappa p_\lambda = p_\mu p^\mu.
-\]</div>
-<p>Since there are no mixed indices leftover, all mixed index terms must vanish,
-i.e.</p>
-<div class="math notranslate nohighlight">
-\[
-\gamma^\mu \gamma^\nu + \gamma^\nu\gamma^\mu = 0, \qquad \mu \ne\nu
-\]</div>
-<p>and all squared terms must equal <span class="math notranslate nohighlight">\(1\)</span> or <span class="math notranslate nohighlight">\(-1\)</span>. In fact,</p>
-<div class="math notranslate nohighlight">
-\[
-(\gamma^0)^2 = 1, \qquad (\gamma^1)^2 = (\gamma^2)^2 = (\gamma^3)^2 = -1.
-\]</div>
-<p>However, there are no numbers that obey these relations. Dirac had the insight
-to treat these not as numbers, but as matrices, which don’t commute and could
-follow the above relation. As matrices, the <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> follow the succinct
-relation</p>
-<div class="math notranslate nohighlight" id="equation-eq-gamma-anticommutation">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-gamma-anticommutation" title="Link to this equation">#</a></span>\[
-\{\gamma^\mu, \gamma^\nu\} = 2\eta^{\mu\nu},
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(\{A, B\} = AB + BA\)</span> is the <em>anticommutator</em> of matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> and
-there is an implied identity matrix of appropriate size after <span class="math notranslate nohighlight">\(\eta^{\mu\nu}\)</span>.
-It turns out that the smallest matrices that obey these anticommutator relations
-are <span class="math notranslate nohighlight">\(4\times 4\)</span>. In the Dirac basis, these matrices are</p>
-<div class="math notranslate nohighlight" id="equation-eq-gamma-def">
-<span class="eqno">(2.4)<a class="headerlink" href="#equation-eq-gamma-def" title="Link to this equation">#</a></span>\[\begin{split}
-\gamma^0 =
+\[\begin{split}
 \begin{pmatrix}
-1 &amp; 0\\ 0 &amp; -1
-\end{pmatrix}, \qquad
-\gamma^i =
+ct' \\ x' \\ y' \\ z'
+\end{pmatrix}
+=
 \begin{pmatrix}
-0 &amp; \sigma^i\\ -\sigma^i &amp; 0
+\gamma &amp; -\gamma\beta &amp; 0 &amp; 0 \\
+-\gamma\beta &amp; \gamma &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}
+\begin{pmatrix}
+ct \\ x \\ y \\ z
 \end{pmatrix}
 \end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\sigma^i\ (i = 1, 2, 3)\)</span> are the Pauli matrices,</p>
+<p>We can write this using summation notation letting Greek letter indices run
+from 0 to 3,</p>
+<div class="math notranslate nohighlight">
+\[
+{r'}^\mu = \sum_{\nu = 0}^3 ({\Lambda^\mu}_\nu)r^\nu,
+\]</div>
+<p>where we define <span class="math notranslate nohighlight">\(\Lambda\)</span> as the <strong>Lorentz transformation matrix</strong>. The index
+<span class="math notranslate nohighlight">\(\mu\)</span> indicates the row, while <span class="math notranslate nohighlight">\(\nu\)</span> indicates the column. This can be further
+simplified by the <strong>Einstein summation convention</strong><a class="footnote-reference brackets" href="#einstein-sum" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, where
+summation is implied over any Greek index that is repeated. Under this
+convention, the matrix multiplication is written as</p>
+<div class="math notranslate nohighlight" id="equation-eq-4-vec-transform">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-4-vec-transform" title="Link to this equation">#</a></span>\[
+{r'}^\mu = {\Lambda^\mu}_\nu r^\nu.
+\]</div>
+<p>One advantage of this reframing of the Lorentz transformations is that a
+general Lorentz transformation takes this form, not just Lorentz
+transformations along the <span class="math notranslate nohighlight">\(x\)</span>-axis. Additionally, we can define <em>any</em>
+four-vector <span class="math notranslate nohighlight">\(a^\mu\)</span> as an object that transforms according to
+Eq. <a class="reference internal" href="#equation-eq-4-vec-transform">()</a>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-contravar-transformation">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-contravar-transformation" title="Link to this equation">#</a></span>\[
+{a'}^\mu = {\Lambda^\mu}_\nu a^\nu.
+\]</div>
+<p>Like normal vectors, four-vectors have an analog to the dot product (or inner
+product), given by</p>
+<div class="math notranslate nohighlight">
+\[
+a^0b^0 - a^1b^1 - a^2b^2 - a^3b^3.
+\]</div>
+<p>This inner product is <em>invariant</em> under Lorentz transformation,</p>
+<div class="math notranslate nohighlight">
+\[
+{a'}^0{b'}^0 - {a'}^1{b'}^1 - {a'}^2{b'}^2 - {a'}^3{b'}^3 =
+a^0b^0 - a^1b^1 - a^2b^2 - a^3b^3,
+\]</div>
+<p>the same way that normal (3-)vectors are invariant under spatial
+rotations.<a class="footnote-reference brackets" href="#time-rotation" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> For example, the inner product of the position
+four-vector with itself gives the invariant quantity</p>
+<div class="math notranslate nohighlight">
+\[
+(ct)^2 - x^2 - y^2 - z^2.
+\]</div>
+<p>if we have two events in spacetime separated in time by <span class="math notranslate nohighlight">\(\Delta t\)</span> and in space
+by <span class="math notranslate nohighlight">\(\Delta \mathbf{r}\)</span>, we get the quantity known as the <strong>spacetime interval</strong></p>
+<div class="math notranslate nohighlight">
+\[
+(\Delta s)^2 = (c\Delta t)^2 - (\Delta \mathbf{r})^2 = (c\Delta t)^2 -
+(\Delta x)^2 - (\Delta y)^2 - (\Delta z)^2,
+\]</div>
+<p>where the sign of <span class="math notranslate nohighlight">\(\Delta s\)</span> describes how the two events are separated.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\sigma^1 = 
-\begin{pmatrix}
-0 &amp; 1 \\ 1 &amp; 0
-\end{pmatrix}, \qquad
-\sigma^2 = 
-\begin{pmatrix}
-0 &amp; -i \\ i &amp; 0
-\end{pmatrix}, \qquad
-\sigma^3 = 
-\begin{pmatrix}
-1 &amp; 0 \\ 0 &amp; -1
-\end{pmatrix},
+\begin{cases}
+\Delta s &gt; 0 &amp; \text{timelike separated}\\
+\Delta s = 0 &amp; \text{lightlike separated}\\
+\Delta s &lt; 0 &amp; \text{spacelike separated}.
+\end{cases}
 \end{split}\]</div>
-<p>and each entry in the gamma matrices is a <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix, with <span class="math notranslate nohighlight">\(1\)</span>
-representing the identity matrix and <span class="math notranslate nohighlight">\(0\)</span> representing a matrix of zeros.</p>
-<p>The energy-momentum relation now reads</p>
-<div class="math notranslate nohighlight" id="equation-eq-dirac-diff-sq">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-eq-dirac-diff-sq" title="Link to this equation">#</a></span>\[
-p_\mu p^\mu - (mc)^2 = (\gamma^\mu p_\mu + mc)(\gamma^\mu p_\mu - mc) = 0.
-\]</div>
-<p>By convention, the second factor in the middle expression of
-Eq. <a class="reference internal" href="#equation-eq-dirac-diff-sq">(2.5)</a> is taken to be the Dirac equation,</p>
-<div class="math notranslate nohighlight">
-\[
-(\gamma^\mu p_\mu - mc) = 0.
-\]</div>
-<p>Now we apply the quantum prescription, which in 4-vector notation is</p>
-<div class="math notranslate nohighlight">
-\[
-p_\mu = i\hbar \partial_\mu
-\]</div>
-<p>where we define the 4-gradient</p>
-<div class="math notranslate nohighlight">
-\[
-\partial_\mu \equiv \dfrac{\partial}{\partial r^\mu} = (\partial_0, \boldsymbol\nabla)
-\]</div>
-<p>or, to be explicit about the components,</p>
-<div class="math notranslate nohighlight">
-\[
-\partial_0 = \dfrac{1}{c}\dfrac{\partial}{\partial t},\qquad
-\partial_1 = \dfrac{\partial}{\partial x},\qquad
-\partial_2 = \dfrac{\partial}{\partial y},\qquad
-\partial_3 = \dfrac{\partial}{\partial z}.
-\]</div>
-<p>Acting this differential operator on the wave function <span class="math notranslate nohighlight">\(\psi\)</span>, we get
-the Dirac equation,</p>
-<div class="math notranslate nohighlight">
-\[
-i\hbar\gamma^\mu \partial_\mu \psi - mc\psi = 0.
-\]</div>
-<p>Because the <span class="math notranslate nohighlight">\(\gamma^\mu\)</span> matrices are <span class="math notranslate nohighlight">\(4\times 4\)</span> matrices, <span class="math notranslate nohighlight">\(\psi\)</span> must
-be a four-component column matrix,</p>
+<p>Under Lorentz transformations, events that are timelike separated can occur in
+the same place, but never simultaneously, whereas spacelike separated events
+can occur simultaneously, but never at the same location.</p>
+</section>
+<section id="the-metric">
+<h1>The Metric<a class="headerlink" href="#the-metric" title="Link to this heading">#</a></h1>
+<p>As a shorthand, we can keep track of the negative
+signs in the inner product with the (<strong>Minkowski</strong>) <strong>metric</strong>,<a class="footnote-reference brackets" href="#metric-conv" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\psi =
+\eta_{\mu\nu} = \eta^{\mu\nu} =
+\left(
+\begin{array}{rrrr}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; -1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; -1
+\end{array}
+\right)
+\end{split}\]</div>
+<p>so that</p>
+<div class="math notranslate nohighlight">
+\[
+a^0b^0 - a^1b^1 - a^2b^2 - a^3b^3 =
+\eta_{\mu\nu}a^\mu b^\nu.
+\]</div>
+<p>Using the metric, we can define the <strong>covariant vector</strong></p>
+<div class="math notranslate nohighlight">
+\[
+a_\mu = \eta_{\mu\nu} a^\nu,
+\]</div>
+<p>which has its spatial components (1, 2, 3) flipped in sign but the temporal
+component preserved. Note that under Lorentz transformations, covariant vectors
+transform according to the rule</p>
+<div class="math notranslate nohighlight" id="equation-eq-covar-transform">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-covar-transform" title="Link to this equation">#</a></span>\[
+a'_\nu = \eta_{\rho\nu}{\Lambda^\rho}_\sigma \eta^{\mu\sigma} a_\mu =
+{(\Lambda^{-1})^\mu}_\nu a^{}_\mu.
+\]</div>
+<p>The four-vectors with upper indices we worked with earlier are known as
+<strong>contravariant vectors</strong>. Contracting a covariant vector with a contravariant
+vector gives the inner product</p>
+<div class="math notranslate nohighlight">
+\[
+\eta_{\mu\nu}a^\mu b^\nu = a^\mu b_\mu = a_\mu b^\mu =
+a^0b^0 - a^1b^1 - a^2b^2 - a^3b^3.
+\]</div>
+<p>This notation requires care with the upperness or lowerness of the indices on
+four-vectors. Because the index is repeated in the inner product, and that the
+upperness of the first vector cancels with the lowerness of the second, we end
+up with a <em>scalar product</em> (one component). The combination <span class="math notranslate nohighlight">\(a^\mu b^\nu\)</span>,
+which neither repeats indices nor mixes upper and lower indices, is a
+second-rank <strong>tensor</strong> (<span class="math notranslate nohighlight">\(T^{\mu\nu}\)</span>) which is <em>contravariant</em> in both indices.
+This object transforms as</p>
+<div class="math notranslate nohighlight">
+\[
+{a'}^\mu{b'}^\nu = ({\Lambda^\mu}_\rho a^\rho) ({\Lambda^\nu}_\sigma b^\sigma)=
+{\Lambda^\mu}_\rho {\Lambda^\nu}_\sigma T^{\rho\sigma}.
+\]</div>
+<p>Using the metric, we can mix contravariance and covariance in tensors:</p>
+<div class="math notranslate nohighlight">
+\[
+\eta_{\nu\rho}T^{\mu\rho} = {T^\mu}_\nu.
+\]</div>
+<section id="momentum-4-vector">
+<h2>Momentum 4-vector<a class="headerlink" href="#momentum-4-vector" title="Link to this heading">#</a></h2>
+<p>Velocity in special relativity follows the Einstein velocity addition rule
+(Eq. <a class="reference internal" href="00-special-relativity.html#equation-eq-einstein-vel">()</a>), which means that velocity is not a four-vector. What
+is needed is either a distance or a time which can be agreed upon by all
+inertial reference frames. If you are moving with some velocity <span class="math notranslate nohighlight">\(u\)</span> relative to
+Earth, the clock on your wall reads time in the <em>lab frame</em>, while the watch on
+your wrist reads your <strong>proper time</strong>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-proper-time">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-proper-time" title="Link to this equation">#</a></span>\[
+d\tau = \sqrt{1-u^2/c^2}\,dt.
+\]</div>
+<p>The lab time depends on your speed <span class="math notranslate nohighlight">\(u\)</span>, but everyone can use the equations for
+Lorentz transformations to determine your proper time. Thus, proper time is an
+<em>invariant</em>. In fact, for an object at rest (<span class="math notranslate nohighlight">\(dx = dy = dz = 0\)</span>) the proper
+time is the spacetime invariant,</p>
+<div class="math notranslate nohighlight">
+\[
+dr^\mu dr_\mu = (c\,dt)^2 - (dx)^2 - (dy)^2 - (dz)^2 = (c\,d\tau)^2\quad
+\text{(rest frame)}.
+\]</div>
+<p>This means that the quantity</p>
+<div class="math notranslate nohighlight">
+\[
+w^\mu = \frac{dr^\mu}{d\tau}
+\]</div>
+<p>transforms as a four-vector,</p>
+<div class="math notranslate nohighlight">
+\[
+{w'}^\mu = {\Lambda^\mu}_\nu w^\nu.
+\]</div>
+<p>We call <span class="math notranslate nohighlight">\(w^\mu\)</span> the <strong>proper velocity</strong> four-vector. Its zeroth (temporal)
+component is</p>
+<div class="math notranslate nohighlight">
+\[
+w^0 = \frac{dr^0}{d\tau} = c\frac{dt}{d\tau} = \gamma c
+\]</div>
+<p>and its inner product with itself is</p>
+<div class="math notranslate nohighlight">
+\[
+w^\mu w_\mu = \gamma^2(c^2 - v^2) = c^2
+\]</div>
+<p>which is invariant (as it should be!). The momentum four-vector is mass times
+proper velocity:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+p^\mu = m w^\mu = \gamma m
 \begin{pmatrix}
-\psi_1\\ \psi_2\\ \psi_3\\ \psi_4\\ 
+c \\ w_x \\ w_y \\ w_z
 \end{pmatrix}.
 \end{split}\]</div>
-<p>This object is known as a <em>Dirac spinor</em> or a <em>bispinor</em>. It turns out that
-it is <em>not</em> a four-vector, which will be covered in the next section.</p>
+<p>Defining <span class="math notranslate nohighlight">\(p^0 = E/c\)</span> as the relativistic energy (divided by <span class="math notranslate nohighlight">\(c\)</span>), we get</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+p^\mu =
+\begin{pmatrix}
+E/c \\ p_x \\ p_y \\ p_z
+\end{pmatrix}
+\end{split}\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[
+E = \gamma mc^2.
+\]</div>
+<p>When an object is at rest (<span class="math notranslate nohighlight">\(\gamma = 1\)</span>), the energy is nonzero. We define the
+rest energy as</p>
+<div class="math notranslate nohighlight" id="equation-eq-emc2">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-emc2" title="Link to this equation">#</a></span>\[
+E_{\rm rest} = mc^2.
+\]</div>
+<p>The <strong>kinetic energy</strong> is the total energy minus the rest energy,</p>
+<div class="math notranslate nohighlight">
+\[
+E_{\rm kin} = E - mc^2 = (\gamma - 1)mc^2.
+\]</div>
+<p>Note that in the nonrelativistic limit, the kinetic energy is</p>
+<div class="math notranslate nohighlight">
+\[
+E_{\rm kin} = \left(1 + \frac{1}{2}\frac{v^2}{c^2} +\ldots -1 \right) mc^2
+\simeq \frac{1}{2}mv^2
+\]</div>
+<p>which matches the classical kinetic energy. Additionally, the inner product of
+the momentum four-vector with itself is</p>
+<div class="math notranslate nohighlight" id="equation-eq-pmu-pmu">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-pmu-pmu" title="Link to this equation">#</a></span>\[
+p^\mu p_\mu = \left(\frac{E}{c}\right)^2 - p^2 = (mc)^2,
+\]</div>
+<p>which is known as the <strong>relativistic energy-momentum relation</strong>.</p>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="superscript" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Here superscripts are an index rather than an exponent. In
+special relativity, we have to be explicit about exponents vs. upper indices.</p>
+</aside>
+<aside class="footnote brackets" id="einstein-sum" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Einstein apparently  considered this one of his greatest
+contributions.</p>
+</aside>
+<aside class="footnote brackets" id="time-rotation" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>Lorentz transformations can be considered <strong>time rotations</strong>.</p>
+</aside>
+<aside class="footnote brackets" id="metric-conv" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>The spacetime metric merely needs the spatial components to
+have an opposite sign compared to the time component. The matrix
+<span class="math notranslate nohighlight">\(\operatorname{diag}(-1, 1, 1, 1)\)</span> is an equally valid convention that is more
+common in general relativity. This text uses the metric more common in particle
+physics and quantum field theory.</p>
+</aside>
+</aside>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -598,24 +709,6 @@ it is <em>not</em> a four-vector, which will be covered in the next section.</p>
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="00-special-relativity.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span>Special Relativity</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="02-lorentz-invariance-of-dirac-eqn.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.4. </span>Lorentz Invariance of the Dirac Equation</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -632,8 +725,11 @@ it is <em>not</em> a four-vector, which will be covered in the next section.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2.2. The Klein-Gordon Equation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dirac-equation">2.3. The Dirac Equation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Four-vectors</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-metric">The Metric</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-4-vector">Momentum 4-vector</a></li>
+</ul>
+</li>
 </ul>
 
   </nav></div>
