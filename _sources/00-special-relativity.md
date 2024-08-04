@@ -42,12 +42,12 @@ rock are seen in the Galilean paradigm as
 $$
 t' = t,\qquad x' = x-vt.
 $$ (eq:galilean-transformations)
-The first equation seems like a tautology – of course the rock's time looks no 
-different in the moving frame! However, due to the invariance of the speed of 
-light with respect change in reference frame, we have to challenge this 
-assumption. Since the invariant thing is a *speed*, we have to consider that a 
-change to a position to a change in reference frame must be compensated by a 
-change in temporal position, or, if you prefer, a change in clock reading. 
+The first equation seems like a tautology – of course the rock's time looks no
+different in the moving frame! However, due to the invariance of the speed of
+light with respect change in reference frame, we have to challenge this
+assumption. Since the invariant thing is a *speed*, we have to consider that a
+change to a position to a change in reference frame must be compensated by a
+change in temporal position, or, if you prefer, a change in clock reading.
 <!-- Insert light clock argument! -->
 Consider a **light clock** – an object that bounces a short pulse of
 light between two mirrors set a certain distance $L$ apart which
@@ -60,7 +60,7 @@ a distance of $2L$,
 $$
 c\Delta t = 2L.
 $$
-When the light clock travels in the $+x$-direction at a velocity $v$, the light 
+When the light clock travels in the $+x$-direction at a velocity $v$, the light
 makes a round trip to tick after it travels a distance
 
 $$
@@ -78,15 +78,15 @@ $$
 \gamma = \dfrac{1}{\sqrt{1-v^2/c^2}}
 $$(eq:lorentz-factor)
 The conclusion drawn from these relations is that *moving clocks tick more
-slowly*, since $\gamma \ge 1$ for all velocities $v$. The name for this 
-phenomenon is **time dilation**. We can glean another relation for lengths by 
+slowly*, since $\gamma \ge 1$ for all velocities $v$. The name for this
+phenomenon is **time dilation**. We can glean another relation for lengths by
 turning the light clock on its side. In this scenario, when at rest, the length
 of the light clock is simply
 
 $$
 L = c\Delta t.
 $$
-When the light clock travels at velocity $v$ in the $+x$-direction, the 
+When the light clock travels at velocity $v$ in the $+x$-direction, the
 distance traveled per tick is related by
 
 $$
@@ -100,20 +100,20 @@ $$ (eq:length-contraction)
 The conclusion here is that *moving objects appear shorter*. This is the
 phenomenon of **length contraction** for moving objects.
 
-As a quick aside, these are very subtle effects for everyday motion. 
+As a quick aside, these are very subtle effects for everyday motion.
 Considering even the fastest everyday speeds, like traveling on an airplane,
-we get $v \sim 300~\text{m/s} \sim 10^{-6} c$. For small $v/c$, the binomial 
+we get $v \sim 300~\text{m/s} \sim 10^{-6} c$. For small $v/c$, the binomial
 theorem approximates the Lorentz factor as about $1 + v/2c$ which means that
 the difference between rest times and lengths to moving times and lengths would
 only be about 500 parts per billion. A one foot ruler would only contract by
-a fraction of the length of a bacterium. It's only when an object approaches a 
+a fraction of the length of a bacterium. It's only when an object approaches a
 significant fraction of the speed of light that these effects are noticeable.
 
 Using these relationships of lengths and time intervals between rest frame and
-lab frame, we can transform coordinates between the two frames. Let's consider 
+lab frame, we can transform coordinates between the two frames. Let's consider
 the light clock on its side and track the rightmost side of the light clock as
-being at coordinates (t, x) in  the lab frame $\mathcal{S}$ while it has the
-coordinates $(t', x')$ in the frame $\mathcal{S}'$ moving with the light clock 
+being at coordinates $(t, x)$ in  the lab frame $\mathcal{S}$ while it has the
+coordinates $(t', x')$ in the frame $\mathcal{S}'$ moving with the light clock
 at velocity $v$ in the $+x$-direction. By this logic,
 
 $$
@@ -154,7 +154,7 @@ $$
 }
 $$ (eq:lorentz-transformations)
 These are the **Lorentz transformations** of special relativity. Note that,
-when $v \ll c$, $\gamma\to 1$ and these reduce to the Galilean relationship 
+when $v \ll c$, $\gamma\to 1$ and these reduce to the Galilean relationship
 (Eq. [](eq:galilean-transformations)). Also, dimensions perpendicular to the
 direction of motion do not get contracted.
 
@@ -184,6 +184,6 @@ This is the **Einstein velocity addition rule**. Note that if $u = c$,
 $$
 u' = \frac{c - v}{1-cv/c^2} = c \left(\frac{1 - v/c}{1 - v/c}\right) = c,
 $$
-preserving the invariance of the speed of light. When $u \ll c$ and $v \ll c$, 
-we recover the relative velocity of Galilean relativity (Eq. 
+preserving the invariance of the speed of light. When $u \ll c$ and $v \ll c$,
+we recover the relative velocity of Galilean relativity (Eq.
 [](eq:rel-vel-gal)).
