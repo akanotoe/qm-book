@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -42,7 +42,7 @@
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
@@ -499,7 +499,7 @@ we get the infinitesimal Lorentz transformation</p>
 <span class="eqno">(2.11)<a class="headerlink" href="#equation-eq-lt-expmat" title="Link to this equation">#</a></span>\[
 \Lambda = \exp\left(\frac{1}{2}\omega_{\rho\sigma}M^{\rho\sigma}\right).
 \]</div>
-<p>What are <span class="math notranslate nohighlight">\(\omega_{\rho\sigma}\)</span>? I won’t prove it (you get to <a class="reference internal" href="#ex-omega-rs"><span class="std std-ref">in the
+<p>What are <span class="math notranslate nohighlight">\(\omega_{\rho\sigma}\)</span>? I won’t prove it (you get to <a class="reference internal" href="#exercises"><span class="std std-ref">in the
 Exercises</span></a>), but they are a set of constants which tell
 us what kind of Lorentz transformation we’re applying with <span class="math notranslate nohighlight">\(\Lambda\)</span>.
 The matrix aspect of <span class="math notranslate nohighlight">\({\omega^\mu}_\nu\)</span> has been extracted to the
@@ -568,7 +568,7 @@ derived from the speed. In fact, it can be shown that</p>
 \end{pmatrix}
 \end{aligned}
 \end{split}\]</div>
-<p>which (with a little substitution) matches matrix at the top of the page.
+<p>which (with a little substitution) matches the matrix at the top of the page.
 Below is some code that demonstrates this.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -589,11 +589,11 @@ Below is some code that demonstrates this.</p>
 
 <span class="c1"># Use beta parameter of sqrt(3/4), as this gives a gamma of 2 for easy</span>
 <span class="c1"># verification.</span>
-<span class="n">beta</span> <span class="o">=</span> <span class="mi">3</span><span class="o">**</span><span class="mf">.5</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;beta = </span><span class="si">{</span><span class="n">beta</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;gamma = </span><span class="si">{</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**-</span><span class="mf">.5</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;gamma*beta = </span><span class="si">{</span><span class="n">beta</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**-</span><span class="mf">.5</span><span class="si">}</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">chi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctanh</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span>
+<span class="n">gamma</span> <span class="o">=</span> <span class="mf">2.</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;beta = </span><span class="si">{</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">gamma</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;gamma = </span><span class="si">{</span><span class="n">gamma</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;gamma*beta = </span><span class="si">{</span><span class="n">gamma</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">gamma</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">.5</span><span class="si">}</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">chi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctanh</span><span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">gamma</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">.5</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\Lambda = &#39;</span><span class="p">)</span>
 <span class="c1"># The extra factor of two below comes from summing omega_10 M^10 + omega_01 M^10</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">linalg</span><span class="o">.</span><span class="n">expm</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="n">chi</span> <span class="o">*</span> <span class="n">m_01</span><span class="p">))</span>
@@ -609,8 +609,8 @@ Below is some code that demonstrates this.</p>
 
 
 beta = 0.8660254037844386
-gamma = 1.9999999999999996
-gamma*beta = 1.7320508075688767
+gamma = 2.0
+gamma*beta = 1.7320508075688772
 
 \Lambda = 
 [[ 2.         -1.73205081  0.          0.        ]
@@ -764,7 +764,7 @@ below.</p>
 <span class="n">aplus</span> <span class="o">=</span> <span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">cosh</span><span class="p">(</span><span class="n">chi</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">.5</span>
 <span class="n">aminus</span> <span class="o">=</span> <span class="o">-</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">cosh</span><span class="p">(</span><span class="n">chi</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">.5</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;a_+ = </span><span class="si">{</span><span class="n">aplus</span><span class="si">:</span><span class="s1">.8f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;a_- = </span><span class="si">{</span><span class="n">aminus</span><span class="si">:</span><span class="s1">.8f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;a_− = </span><span class="si">{</span><span class="n">aminus</span><span class="si">:</span><span class="s1">.8f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="c1"># Remember that omega_10 = -omega_01 = chi, hence the minus sign</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">linalg</span><span class="o">.</span><span class="n">expm</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="n">chi</span> <span class="o">*</span> <span class="n">s_01</span><span class="p">))</span>
 </pre></div>
@@ -772,7 +772,7 @@ below.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a_+ = 1.22474487
-a_- = -0.70710678
+a_− = -0.70710678
 [[ 1.22474487  0.          0.         -0.70710678]
  [ 0.          1.22474487 -0.70710678  0.        ]
  [ 0.         -0.70710678  1.22474487  0.        ]
@@ -959,7 +959,7 @@ combination of <span class="math notranslate nohighlight">\(I_4, \gamma^5, \gamm
 <span class="math notranslate nohighlight">\(\eta^{\mu\nu}=2(\gamma^\mu\gamma^\nu-S^{\mu\nu})\)</span>.</p>
 </section>
 <section id="exercises">
-<h1><span class="section-number">2.6. </span>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
+<span id="id1"></span><h1><span class="section-number">2.6. </span>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
 <ol class="arabic">
 <li><p>Show that <span class="math notranslate nohighlight">\(\gamma^0 \gamma^i\)</span> is Hermitian for <span class="math notranslate nohighlight">\(i = 1, 2, 3\)</span>.</p></li>
 <li><p>Using the equation</p>
@@ -970,8 +970,6 @@ combination of <span class="math notranslate nohighlight">\(I_4, \gamma^5, \gamm
 <p>get an expression for
 the Hamiltonian of the Dirac equation.</p>
 </li>
-</ol>
-<ol class="arabic" id="ex-omega-rs">
 <li><p>Prove that <span class="math notranslate nohighlight">\(\omega_{10} = -\omega_{01} = \chi\)</span> for a boost in the
 <span class="math notranslate nohighlight">\(x\)</span>-direction.</p></li>
 <li><p>Starting with the Lorentz invariance of the Dirac equation,</p>
@@ -1052,7 +1050,7 @@ Lorentz group. In other words, show that the commutator of two
 \[
    [S^{\rho\sigma}, S^{\mu\nu}] = \eta^{\rho\nu}S^{\sigma\mu}
    - \eta^{\rho\mu}S^{\sigma\nu} + \eta^{\sigma\mu}S^{\rho\nu}
-   - \eta^{\sigma\mu}S^{\rho\nu},
+   - \eta^{\sigma\nu}S^{\rho\mu},
    \]</div>
 <p>following the same Clifford algebra as the <span class="math notranslate nohighlight">\(M^{\rho\sigma}\)</span>.</p>
 </li>
