@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Four-vectors &#8212; Quantum Mechanics</title>
+    <title>2.2. Four-vectors &#8212; Quantum Mechanics</title>
   
   
   
@@ -62,6 +62,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '01-four-vectors';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2.4. The Klein-Gordon Equation" href="01-the-dirac-equation.html" />
+    <link rel="prev" title="2.1. Special Relativity" href="00-special-relativity.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -123,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -178,13 +178,15 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="the-schrodinger-eqn.html">1. The Schrödinger Equation</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="00-relativistic-qm.html">2. Relativistic Quantum Mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-relativistic-qm.html">2. Relativistic Quantum Mechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="00-special-relativity.html">2.1. Special Relativity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01-the-dirac-equation.html">2.2. The Klein-Gordon Equation</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.2. Four-vectors</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="02-lorentz-invariance-of-dirac-eqn.html">2.4. Lorentz Invariance of the Dirac Equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-the-dirac-equation.html">2.4. The Klein-Gordon Equation</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="02-lorentz-invariance-of-dirac-eqn.html">2.6. Lorentz Invariance of the Dirac Equation</a></li>
 
 
 </ul>
@@ -384,9 +386,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Four-vectors</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-metric">The Metric</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-4-vector">Momentum 4-vector</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2.2. Four-vectors</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-metric">2.3. The Metric</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-4-vector">2.3.1. Momentum 4-vector</a></li>
 </ul>
 </li>
 </ul>
@@ -402,7 +404,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="four-vectors">
-<h1>Four-vectors<a class="headerlink" href="#four-vectors" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">2.2. </span>Four-vectors<a class="headerlink" href="#four-vectors" title="Link to this heading">#</a></h1>
 <p>We can simplify the Lorentz transformations by defining the
 quantities<a class="footnote-reference brackets" href="#superscript" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight">
@@ -452,16 +454,16 @@ simplified by the <strong>Einstein summation convention</strong><a class="footno
 summation is implied over any Greek index that is repeated. Under this
 convention, the matrix multiplication is written as</p>
 <div class="math notranslate nohighlight" id="equation-eq-4-vec-transform">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-4-vec-transform" title="Link to this equation">#</a></span>\[
+<span class="eqno">(2.8)<a class="headerlink" href="#equation-eq-4-vec-transform" title="Link to this equation">#</a></span>\[
 {r'}^\mu = {\Lambda^\mu}_\nu r^\nu.
 \]</div>
 <p>One advantage of this reframing of the Lorentz transformations is that a
 general Lorentz transformation takes this form, not just Lorentz
 transformations along the <span class="math notranslate nohighlight">\(x\)</span>-axis. Additionally, we can define <em>any</em>
 four-vector <span class="math notranslate nohighlight">\(a^\mu\)</span> as an object that transforms according to
-Eq. <a class="reference internal" href="#equation-eq-4-vec-transform">()</a>,</p>
+Eq. <a class="reference internal" href="#equation-eq-4-vec-transform">(2.8)</a>,</p>
 <div class="math notranslate nohighlight" id="equation-eq-contravar-transformation">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-contravar-transformation" title="Link to this equation">#</a></span>\[
+<span class="eqno">(2.9)<a class="headerlink" href="#equation-eq-contravar-transformation" title="Link to this equation">#</a></span>\[
 {a'}^\mu = {\Lambda^\mu}_\nu a^\nu.
 \]</div>
 <p>Like normal vectors, four-vectors have an analog to the dot product (or inner
@@ -504,7 +506,7 @@ the same place, but never simultaneously, whereas spacelike separated events
 can occur simultaneously, but never at the same location.</p>
 </section>
 <section id="the-metric">
-<h1>The Metric<a class="headerlink" href="#the-metric" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">2.3. </span>The Metric<a class="headerlink" href="#the-metric" title="Link to this heading">#</a></h1>
 <p>As a shorthand, we can keep track of the negative
 signs in the inner product with the (<strong>Minkowski</strong>) <strong>metric</strong>,<a class="footnote-reference brackets" href="#metric-conv" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight">
@@ -534,7 +536,7 @@ a_\mu = \eta_{\mu\nu} a^\nu,
 component preserved. Note that under Lorentz transformations, covariant vectors
 transform according to the rule</p>
 <div class="math notranslate nohighlight" id="equation-eq-covar-transform">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-covar-transform" title="Link to this equation">#</a></span>\[
+<span class="eqno">(2.10)<a class="headerlink" href="#equation-eq-covar-transform" title="Link to this equation">#</a></span>\[
 a'_\nu = \eta_{\rho\nu}{\Lambda^\rho}_\sigma \eta^{\mu\sigma} a_\mu =
 {(\Lambda^{-1})^\mu}_\nu a^{}_\mu.
 \]</div>
@@ -564,7 +566,7 @@ This object transforms as</p>
 \eta_{\nu\rho}T^{\mu\rho} = {T^\mu}_\nu.
 \]</div>
 <section id="momentum-4-vector">
-<h2>Momentum 4-vector<a class="headerlink" href="#momentum-4-vector" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.3.1. </span>Momentum 4-vector<a class="headerlink" href="#momentum-4-vector" title="Link to this heading">#</a></h2>
 <p>Velocity in special relativity follows the Einstein velocity addition rule
 (Eq. <a class="reference internal" href="00-special-relativity.html#equation-eq-einstein-vel">(2.7)</a>), which means that velocity is not a four-vector. What
 is needed is either a distance or a time which can be agreed upon by all
@@ -572,7 +574,7 @@ inertial reference frames. If you are moving with some velocity <span class="mat
 Earth, the clock on your wall reads time in the <em>lab frame</em>, while the watch on
 your wrist reads your <strong>proper time</strong>,</p>
 <div class="math notranslate nohighlight" id="equation-eq-proper-time">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-proper-time" title="Link to this equation">#</a></span>\[
+<span class="eqno">(2.11)<a class="headerlink" href="#equation-eq-proper-time" title="Link to this equation">#</a></span>\[
 d\tau = \sqrt{1-u^2/c^2}\,dt.
 \]</div>
 <p>The lab time depends on your speed <span class="math notranslate nohighlight">\(u\)</span>, but everyone can use the equations for
@@ -630,7 +632,7 @@ E = \gamma mc^2.
 <p>When an object is at rest (<span class="math notranslate nohighlight">\(\gamma = 1\)</span>), the energy is nonzero. We define the
 rest energy as</p>
 <div class="math notranslate nohighlight" id="equation-eq-emc2">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-emc2" title="Link to this equation">#</a></span>\[
+<span class="eqno">(2.12)<a class="headerlink" href="#equation-eq-emc2" title="Link to this equation">#</a></span>\[
 E_{\rm rest} = mc^2.
 \]</div>
 <p>The <strong>kinetic energy</strong> is the total energy minus the rest energy,</p>
@@ -647,7 +649,7 @@ E_{\rm kin} = \left(1 + \frac{1}{2}\frac{v^2}{c^2} +\ldots -1 \right) mc^2
 <p>which matches the classical kinetic energy. Additionally, the inner product of
 the momentum four-vector with itself is</p>
 <div class="math notranslate nohighlight" id="equation-eq-pmu-pmu">
-<span class="eqno">()<a class="headerlink" href="#equation-eq-pmu-pmu" title="Link to this equation">#</a></span>\[
+<span class="eqno">(2.13)<a class="headerlink" href="#equation-eq-pmu-pmu" title="Link to this equation">#</a></span>\[
 p^\mu p_\mu = \left(\frac{E}{c}\right)^2 - p^2 = (mc)^2,
 \]</div>
 <p>which is known as the <strong>relativistic energy-momentum relation</strong>.</p>
@@ -709,6 +711,24 @@ physics and quantum field theory.</p>
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="00-special-relativity.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2.1. </span>Special Relativity</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="01-the-dirac-equation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2.4. </span>The Klein-Gordon Equation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -725,9 +745,9 @@ physics and quantum field theory.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Four-vectors</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-metric">The Metric</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-4-vector">Momentum 4-vector</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2.2. Four-vectors</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-metric">2.3. The Metric</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-4-vector">2.3.1. Momentum 4-vector</a></li>
 </ul>
 </li>
 </ul>

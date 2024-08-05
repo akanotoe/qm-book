@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2.4. Lorentz Invariance of the Dirac Equation &#8212; Quantum Mechanics</title>
+    <title>2.6. Lorentz Invariance of the Dirac Equation &#8212; Quantum Mechanics</title>
   
   
   
@@ -62,7 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '02-lorentz-invariance-of-dirac-eqn';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="2.2. The Klein-Gordon Equation" href="01-the-dirac-equation.html" />
+    <link rel="prev" title="2.4. The Klein-Gordon Equation" href="01-the-dirac-equation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,9 +181,11 @@
 <li class="toctree-l1"><a class="reference internal" href="the-schrodinger-eqn.html">1. The Schrödinger Equation</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="00-relativistic-qm.html">2. Relativistic Quantum Mechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="00-special-relativity.html">2.1. Special Relativity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01-the-dirac-equation.html">2.2. The Klein-Gordon Equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-four-vectors.html">2.2. Four-vectors</a></li>
 
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.4. Lorentz Invariance of the Dirac Equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-the-dirac-equation.html">2.4. The Klein-Gordon Equation</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.6. Lorentz Invariance of the Dirac Equation</a></li>
 
 
 </ul>
@@ -383,9 +385,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2.4. Lorentz Invariance of the Dirac Equation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bilinear-invariants">2.5. Bilinear Invariants</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">2.6. Exercises</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2.6. Lorentz Invariance of the Dirac Equation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bilinear-invariants">2.7. Bilinear Invariants</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">2.8. Exercises</a></li>
 </ul>
 
             </nav>
@@ -399,7 +401,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="lorentz-invariance-of-the-dirac-equation">
-<h1><span class="section-number">2.4. </span>Lorentz Invariance of the Dirac Equation<a class="headerlink" href="#lorentz-invariance-of-the-dirac-equation" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">2.6. </span>Lorentz Invariance of the Dirac Equation<a class="headerlink" href="#lorentz-invariance-of-the-dirac-equation" title="Link to this heading">#</a></h1>
 <p>Since we derived the Dirac equation using a relativistic relationship,
 it should remain invariant under Lorentz transformations, i.e. boosts and
 rotations. Let’s act agnostic to the fact that <span class="math notranslate nohighlight">\(\psi\)</span> is not a four-vector,
@@ -496,7 +498,7 @@ we get the infinitesimal Lorentz transformation</p>
 \]</div>
 <p>which, for finite transformations, becomes</p>
 <div class="math notranslate nohighlight" id="equation-eq-lt-expmat">
-<span class="eqno">(2.11)<a class="headerlink" href="#equation-eq-lt-expmat" title="Link to this equation">#</a></span>\[
+<span class="eqno">(2.17)<a class="headerlink" href="#equation-eq-lt-expmat" title="Link to this equation">#</a></span>\[
 \Lambda = \exp\left(\frac{1}{2}\omega_{\rho\sigma}M^{\rho\sigma}\right).
 \]</div>
 <p>What are <span class="math notranslate nohighlight">\(\omega_{\rho\sigma}\)</span>? I won’t prove it (you get to <a class="reference internal" href="#exercises"><span class="std std-ref">in the
@@ -508,7 +510,7 @@ The matrix aspect of <span class="math notranslate nohighlight">\({\omega^\mu}_\
 groups, the generators form a <em>Clifford algebra</em> described by their
 commutator:</p>
 <div class="math notranslate nohighlight" id="equation-eq-commutator-ms">
-<span class="eqno">(2.12)<a class="headerlink" href="#equation-eq-commutator-ms" title="Link to this equation">#</a></span>\[
+<span class="eqno">(2.18)<a class="headerlink" href="#equation-eq-commutator-ms" title="Link to this equation">#</a></span>\[
 [M^{\rho\sigma}, M^{\mu\nu}] =
 \eta^{\rho\nu}M^{\sigma\mu}
  - \eta^{\rho\mu}M^{\sigma\nu}
@@ -729,7 +731,7 @@ S^{01} = -S^{10} = \dfrac{1}{2}
 \end{split}\]</div>
 <p>with the <span class="math notranslate nohighlight">\(S\)</span> matrix taking the form</p>
 <div class="math notranslate nohighlight" id="equation-eq-boostx">
-<span class="eqno">(2.13)<a class="headerlink" href="#equation-eq-boostx" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(2.19)<a class="headerlink" href="#equation-eq-boostx" title="Link to this equation">#</a></span>\[\begin{split}
 S = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
 \gamma^0\gamma^1\sinh\left(\dfrac{\chi}{2}\right) =
 \left(
@@ -749,7 +751,7 @@ a_\pm = \pm\sqrt{\frac{\gamma \pm 1}{2}}.
 <p>For a boost in the general <span class="math notranslate nohighlight">\(\boldsymbol{\hat{\rm n}}\)</span> direction, the <span class="math notranslate nohighlight">\(S\)</span> matrix
 takes the form</p>
 <div class="math notranslate nohighlight" id="equation-eq-boostn">
-<span class="eqno">(2.14)<a class="headerlink" href="#equation-eq-boostn" title="Link to this equation">#</a></span>\[
+<span class="eqno">(2.20)<a class="headerlink" href="#equation-eq-boostn" title="Link to this equation">#</a></span>\[
 S_{\rm boost} = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
 \gamma^0 (\boldsymbol{\gamma} \cdot \boldsymbol{\hat{\rm n}})
 \sinh\left(\dfrac{\chi}{2}\right)
@@ -886,7 +888,7 @@ is not what happens with a four-vector, as the math below shows that
 </div>
 </section>
 <section id="bilinear-invariants">
-<h1><span class="section-number">2.5. </span>Bilinear Invariants<a class="headerlink" href="#bilinear-invariants" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">2.7. </span>Bilinear Invariants<a class="headerlink" href="#bilinear-invariants" title="Link to this heading">#</a></h1>
 <p>Now that we have determined <span class="math notranslate nohighlight">\(S\)</span> and its inverse, we can create quantities
 from the bispinor object <span class="math notranslate nohighlight">\(\psi\)</span> that are Lorentz invariant. Since a Lorentz
 transformation changes <span class="math notranslate nohighlight">\(\psi\)</span> according to</p>
@@ -959,7 +961,7 @@ combination of <span class="math notranslate nohighlight">\(I_4, \gamma^5, \gamm
 <span class="math notranslate nohighlight">\(\eta^{\mu\nu}=2(\gamma^\mu\gamma^\nu-S^{\mu\nu})\)</span>.</p>
 </section>
 <section id="exercises">
-<span id="id1"></span><h1><span class="section-number">2.6. </span>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
+<span id="id1"></span><h1><span class="section-number">2.8. </span>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
 <ol class="arabic">
 <li><p>Show that <span class="math notranslate nohighlight">\(\gamma^0 \gamma^i\)</span> is Hermitian for <span class="math notranslate nohighlight">\(i = 1, 2, 3\)</span>.</p></li>
 <li><p>Using the equation</p>
@@ -981,7 +983,7 @@ the Hamiltonian of the Dirac equation.</p>
 <p>derive the rule <span class="math notranslate nohighlight">\(S^{-1}\gamma^\mu S = {\Lambda^\mu}_\nu \gamma^\nu\)</span>.</p>
 </li>
 <li><p>Show that <span class="math notranslate nohighlight">\(S^\dagger S \ne I_4\)</span> for a boost in the <span class="math notranslate nohighlight">\(x\)</span>-direction
-(Eq. <a class="reference internal" href="#equation-eq-boostx">(2.13)</a>). What happens to your result in the nonrelativistic
+(Eq. <a class="reference internal" href="#equation-eq-boostx">(2.19)</a>). What happens to your result in the nonrelativistic
 limit <span class="math notranslate nohighlight">\(v \ll c\)</span>?</p></li>
 <li><p>(a) Use hyperbolic function identities to prove that</p>
 <div class="math notranslate nohighlight">
@@ -1012,7 +1014,7 @@ Which elements get mixed? Which elements do not get mixed?</p></li>
 <span class="math notranslate nohighlight">\(\{\gamma^5, \gamma^\mu\} = \gamma^5\gamma^\mu + \gamma^\mu\gamma^5 = 0\)</span>.
 <br>
 (b) Show that <span class="math notranslate nohighlight">\(\gamma^0\gamma^i = \gamma^5 \Sigma^i\)</span>, so that
-the formula for Lorentz boosts (Eq. <a class="reference internal" href="#equation-eq-boostn">(2.14)</a>) can be rewritten</p>
+the formula for Lorentz boosts (Eq. <a class="reference internal" href="#equation-eq-boostn">(2.20)</a>) can be rewritten</p>
 <div class="math notranslate nohighlight">
 \[
    S_{\rm boost} = I_4\cosh\left(\dfrac{\chi}{2}\right) - 
@@ -1093,7 +1095,7 @@ Lorentz group. In other words, show that the commutator of two
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.2. </span>The Klein-Gordon Equation</p>
+        <p class="prev-next-title"><span class="section-number">2.4. </span>The Klein-Gordon Equation</p>
       </div>
     </a>
 </div>
@@ -1112,9 +1114,9 @@ Lorentz group. In other words, show that the commutator of two
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2.4. Lorentz Invariance of the Dirac Equation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bilinear-invariants">2.5. Bilinear Invariants</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">2.6. Exercises</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2.6. Lorentz Invariance of the Dirac Equation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bilinear-invariants">2.7. Bilinear Invariants</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">2.8. Exercises</a></li>
 </ul>
 
   </nav></div>
