@@ -489,7 +489,7 @@ relation</p>
 <span class="eqno">(2.14)<a class="headerlink" href="#equation-eq-gamma-anticommutation" title="Link to this equation">#</a></span>\[
 \{\gamma^\mu, \gamma^\nu\} = 2\eta^{\mu\nu},
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(\{A, B\} = AB + BA\)</span> is the <em>anticommutator</em> of matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> and
+<p>where <span class="math notranslate nohighlight">\(\{A, B\} = AB + BA\)</span> is the <em>anticommutator</em> of matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, and
 there is an implied identity matrix of appropriate size after <span class="math notranslate nohighlight">\(\eta^{\mu\nu}\)</span>.
 It turns out that the smallest matrices that obey these anticommutator relations
 are <span class="math notranslate nohighlight">\(4\times 4\)</span>. In the Dirac basis, these matrices are</p>
@@ -497,11 +497,11 @@ are <span class="math notranslate nohighlight">\(4\times 4\)</span>. In the Dira
 <span class="eqno">(2.15)<a class="headerlink" href="#equation-eq-gamma-def" title="Link to this equation">#</a></span>\[\begin{split}
 \gamma^0 =
 \begin{pmatrix}
-1 &amp; 0\\ 0 &amp; -1
+I_2 &amp; 0_2\\ 0_2 &amp; -I_2
 \end{pmatrix}, \qquad
 \gamma^i =
 \begin{pmatrix}
-0 &amp; \sigma^i\\ -\sigma^i &amp; 0
+0_2 &amp; \sigma^i\\ -\sigma^i &amp; 0_2
 \end{pmatrix}
 \end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\sigma^i\ (i = 1, 2, 3)\)</span> are the Pauli matrices,</p>
@@ -520,12 +520,12 @@ are <span class="math notranslate nohighlight">\(4\times 4\)</span>. In the Dira
 1 &amp; 0 \\ 0 &amp; -1
 \end{pmatrix},
 \end{split}\]</div>
-<p>and each entry in the gamma matrices is a <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix, with <span class="math notranslate nohighlight">\(1\)</span>
-representing the identity matrix and <span class="math notranslate nohighlight">\(0\)</span> representing a matrix of zeros.</p>
+<p>and each entry in the gamma matrices is a <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix, with <span class="math notranslate nohighlight">\(I_2\)</span>
+representing the identity matrix and <span class="math notranslate nohighlight">\(0_2\)</span> representing a matrix of zeros.</p>
 <p>The energy-momentum relation now reads</p>
 <div class="math notranslate nohighlight" id="equation-eq-dirac-diff-sq">
 <span class="eqno">(2.16)<a class="headerlink" href="#equation-eq-dirac-diff-sq" title="Link to this equation">#</a></span>\[
-p_\mu p^\mu - (mc)^2 = (\gamma^\mu p_\mu + mc)(\gamma^\mu p_\mu - mc) = 0.
+p_\mu p^\mu - (mc)^2 = (\gamma^\rho p_\rho + mc)(\gamma^\sigma p_\sigma - mc) = 0.
 \]</div>
 <p>By convention, the second factor in the middle expression of
 Eq. <a class="reference internal" href="#equation-eq-dirac-diff-sq">(2.16)</a> is taken to be the Dirac equation,</p>
