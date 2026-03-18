@@ -80,14 +80,14 @@ $$(eq:lorentz-factor)
 The conclusion drawn from these relations is that *moving clocks tick more
 slowly*, since $\gamma \ge 1$ for all velocities $v$. The name for this
 phenomenon is **time dilation**. We can glean another relation for lengths by
-turning the light clock on its side. In this scenario, when at rest, the length
-of the light clock is simply
+turning the light clock on its side. In this scenario, when at rest, the round
+trip length of the light clock is simply
 
 $$
-L = c\Delta t.
+L = 2c\Delta t.
 $$
 When the light clock travels at velocity $v$ in the $+x$-direction, the
-distance traveled per tick is related by
+round trip distance traveled is related by
 
 $$
 \frac{L'}{c-v} + \frac{L'}{c+v} = \Delta t'.
@@ -105,7 +105,7 @@ Considering even the fastest everyday speeds, like traveling on an airplane,
 we get $v \sim 300~\text{m/s} \sim 10^{-6} c$. For small $v/c$, the binomial
 theorem approximates the Lorentz factor as about $1 + v/2c$ which means that
 the difference between rest times and lengths to moving times and lengths would
-only be about 500 parts per billion. A one foot ruler would only contract by
+only be about one part in two million. A one foot ruler would only contract by
 a fraction of the length of a bacterium. It's only when an object approaches a
 significant fraction of the speed of light that these effects are noticeable.
 
