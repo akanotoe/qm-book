@@ -84,7 +84,7 @@ turning the light clock on its side. In this scenario, when at rest, the length
 of the light clock is simply
 
 $$
-L = c\Delta t.
+2L = c\Delta t.
 $$
 When the light clock travels at velocity $v$ in the $+x$-direction, the 
 distance traveled per tick is related by
