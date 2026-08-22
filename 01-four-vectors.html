@@ -8,49 +8,49 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2.2. Four-vectors &#8212; Quantum Mechanics</title>
+    <title>Four-vectors &#8212; Quantum Mechanics</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -62,8 +62,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '01-four-vectors';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2.4. The Klein-Gordon Equation" href="01-the-dirac-equation.html" />
-    <link rel="prev" title="2.1. Special Relativity" href="00-special-relativity.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -73,27 +71,23 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -115,8 +109,13 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -124,6 +123,8 @@
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -139,6 +140,8 @@
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -161,7 +164,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -178,19 +181,17 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="the-schrodinger-eqn.html">1. The Schrödinger Equation</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="00-relativistic-qm.html">2. Relativistic Quantum Mechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="00-relativistic-qm.html">2. Relativistic Quantum Mechanics</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="00-special-relativity.html">2.1. Special Relativity</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.2. Four-vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01-the-dirac-equation.html">2.2. The Klein-Gordon Equation</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="01-the-dirac-equation.html">2.4. The Klein-Gordon Equation</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="02-lorentz-invariance-of-dirac-eqn.html">2.6. Lorentz Invariance of the Dirac Equation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-lorentz-invariance-of-dirac-eqn.html">2.4. Lorentz Invariance of the Dirac Equation</a></li>
 
 
-</ul>
-</li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
 </ul>
 
     </div>
@@ -206,7 +207,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -215,14 +216,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -347,10 +348,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -358,14 +359,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -386,9 +387,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2.2. Four-vectors</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-metric">2.3. The Metric</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-4-vector">2.3.1. Momentum 4-vector</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Four-vectors</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-metric">The Metric</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-4-vector">Momentum 4-vector</a></li>
 </ul>
 </li>
 </ul>
@@ -404,7 +405,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="four-vectors">
-<h1><span class="section-number">2.2. </span>Four-vectors<a class="headerlink" href="#four-vectors" title="Link to this heading">#</a></h1>
+<h1>Four-vectors<a class="headerlink" href="#four-vectors" title="Link to this heading">#</a></h1>
 <p>We can simplify the Lorentz transformations by defining the
 quantities<a class="footnote-reference brackets" href="#superscript" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight">
@@ -454,16 +455,16 @@ simplified by the <strong>Einstein summation convention</strong><a class="footno
 summation is implied over any Greek index that is repeated. Under this
 convention, the matrix multiplication is written as</p>
 <div class="math notranslate nohighlight" id="equation-eq-4-vec-transform">
-<span class="eqno">(2.8)<a class="headerlink" href="#equation-eq-4-vec-transform" title="Link to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq-4-vec-transform" title="Link to this equation">#</a></span>\[
 {r'}^\mu = {\Lambda^\mu}_\nu r^\nu.
 \]</div>
 <p>One advantage of this reframing of the Lorentz transformations is that a
 general Lorentz transformation takes this form, not just Lorentz
 transformations along the <span class="math notranslate nohighlight">\(x\)</span>-axis. Additionally, we can define <em>any</em>
 four-vector <span class="math notranslate nohighlight">\(a^\mu\)</span> as an object that transforms according to
-Eq. <a class="reference internal" href="#equation-eq-4-vec-transform">(2.8)</a>,</p>
+Eq. <a class="reference internal" href="#equation-eq-4-vec-transform">()</a>,</p>
 <div class="math notranslate nohighlight" id="equation-eq-contravar-transformation">
-<span class="eqno">(2.9)<a class="headerlink" href="#equation-eq-contravar-transformation" title="Link to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq-contravar-transformation" title="Link to this equation">#</a></span>\[
 {a'}^\mu = {\Lambda^\mu}_\nu a^\nu.
 \]</div>
 <p>Like normal vectors, four-vectors have an analog to the dot product (or inner
@@ -506,7 +507,7 @@ the same place, but never simultaneously, whereas spacelike separated events
 can occur simultaneously, but never at the same location.</p>
 </section>
 <section id="the-metric">
-<h1><span class="section-number">2.3. </span>The Metric<a class="headerlink" href="#the-metric" title="Link to this heading">#</a></h1>
+<h1>The Metric<a class="headerlink" href="#the-metric" title="Link to this heading">#</a></h1>
 <p>As a shorthand, we can keep track of the negative
 signs in the inner product with the (<strong>Minkowski</strong>) <strong>metric</strong>,<a class="footnote-reference brackets" href="#metric-conv" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight">
@@ -536,7 +537,7 @@ a_\mu = \eta_{\mu\nu} a^\nu,
 component preserved. Note that under Lorentz transformations, covariant vectors
 transform according to the rule</p>
 <div class="math notranslate nohighlight" id="equation-eq-covar-transform">
-<span class="eqno">(2.10)<a class="headerlink" href="#equation-eq-covar-transform" title="Link to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq-covar-transform" title="Link to this equation">#</a></span>\[
 a'_\nu = \eta_{\rho\nu}{\Lambda^\rho}_\sigma \eta^{\mu\sigma} a_\mu =
 {(\Lambda^{-1})^\mu}_\nu a^{}_\mu.
 \]</div>
@@ -566,7 +567,7 @@ This object transforms as</p>
 \eta_{\nu\rho}T^{\mu\rho} = {T^\mu}_\nu.
 \]</div>
 <section id="momentum-4-vector">
-<h2><span class="section-number">2.3.1. </span>Momentum 4-vector<a class="headerlink" href="#momentum-4-vector" title="Link to this heading">#</a></h2>
+<h2>Momentum 4-vector<a class="headerlink" href="#momentum-4-vector" title="Link to this heading">#</a></h2>
 <p>Velocity in special relativity follows the Einstein velocity addition rule
 (Eq. <a class="reference internal" href="00-special-relativity.html#equation-eq-einstein-vel">(2.7)</a>), which means that velocity is not a four-vector. What
 is needed is either a distance or a time which can be agreed upon by all
@@ -574,7 +575,7 @@ inertial reference frames. If you are moving with some velocity <span class="mat
 Earth, the clock on your wall reads time in the <em>lab frame</em>, while the watch on
 your wrist reads your <strong>proper time</strong>,</p>
 <div class="math notranslate nohighlight" id="equation-eq-proper-time">
-<span class="eqno">(2.11)<a class="headerlink" href="#equation-eq-proper-time" title="Link to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq-proper-time" title="Link to this equation">#</a></span>\[
 d\tau = \sqrt{1-u^2/c^2}\,dt.
 \]</div>
 <p>The lab time depends on your speed <span class="math notranslate nohighlight">\(u\)</span>, but everyone can use the equations for
@@ -589,7 +590,8 @@ dr^\mu dr_\mu = (c\,dt)^2 - (dx)^2 - (dy)^2 - (dz)^2 = (c\,d\tau)^2\quad
 <p>This means that the quantity</p>
 <div class="math notranslate nohighlight">
 \[
-w^\mu = \frac{dr^\mu}{d\tau}
+w^\mu = \frac{dr^\mu}{d\tau} = \frac{dt}{d\tau} \frac{dr^\mu}{dt} 
+      = \gamma \frac{dr^\mu}{dt}
 \]</div>
 <p>transforms as a four-vector,</p>
 <div class="math notranslate nohighlight">
@@ -602,21 +604,29 @@ component is</p>
 \[
 w^0 = \frac{dr^0}{d\tau} = c\frac{dt}{d\tau} = \gamma c
 \]</div>
-<p>and its inner product with itself is</p>
+<p>while its spatial components (with the velocity vector called <span class="math notranslate nohighlight">\({\bf u}\)</span>)
+are</p>
 <div class="math notranslate nohighlight">
 \[
-w^\mu w_\mu = \gamma^2(c^2 - v^2) = c^2
+w^i = \gamma u^i.
 \]</div>
-<p>which is invariant (as it should be!). The momentum four-vector is mass times
-proper velocity:</p>
+<p>Taking the inner product of the proper velocity with itself yields</p>
+<div class="math notranslate nohighlight">
+\[
+w^\mu w_\mu = \gamma^2(c^2 - u^2) = c^2,
+\]</div>
+<p>which is invariant (as it should be!). From here we can define the
+momentum four-vector as mass times proper velocity:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 p^\mu = m w^\mu = \gamma m
 \begin{pmatrix}
-c \\ w_x \\ w_y \\ w_z
+c \\ u_x \\ u_y \\ u_z
 \end{pmatrix}.
 \end{split}\]</div>
-<p>Defining <span class="math notranslate nohighlight">\(p^0 = E/c\)</span> as the relativistic energy (divided by <span class="math notranslate nohighlight">\(c\)</span>), we get</p>
+<p>The temporal component is called the <em>relativistic energy</em> (divided
+by <span class="math notranslate nohighlight">\(c\)</span>), <span class="math notranslate nohighlight">\(p^0 = E/c\)</span>, which we will justify in a bit. Now the momentum
+four-vector looks like</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 p^\mu =
@@ -632,10 +642,12 @@ E = \gamma mc^2.
 <p>When an object is at rest (<span class="math notranslate nohighlight">\(\gamma = 1\)</span>), the energy is nonzero. We define the
 rest energy as</p>
 <div class="math notranslate nohighlight" id="equation-eq-emc2">
-<span class="eqno">(2.12)<a class="headerlink" href="#equation-eq-emc2" title="Link to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq-emc2" title="Link to this equation">#</a></span>\[
 E_{\rm rest} = mc^2.
 \]</div>
-<p>The <strong>kinetic energy</strong> is the total energy minus the rest energy,</p>
+<p>Note that the rest energy of a system is an invariant; all observers can
+agree what the mass of an object is when it is at rest. The
+<strong>kinetic energy</strong> is the total energy minus the rest energy,</p>
 <div class="math notranslate nohighlight">
 \[
 E_{\rm kin} = E - mc^2 = (\gamma - 1)mc^2.
@@ -649,7 +661,7 @@ E_{\rm kin} = \left(1 + \frac{1}{2}\frac{v^2}{c^2} +\ldots -1 \right) mc^2
 <p>which matches the classical kinetic energy. Additionally, the inner product of
 the momentum four-vector with itself is</p>
 <div class="math notranslate nohighlight" id="equation-eq-pmu-pmu">
-<span class="eqno">(2.13)<a class="headerlink" href="#equation-eq-pmu-pmu" title="Link to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-eq-pmu-pmu" title="Link to this equation">#</a></span>\[
 p^\mu p_\mu = \left(\frac{E}{c}\right)^2 - p^2 = (mc)^2,
 \]</div>
 <p>which is known as the <strong>relativistic energy-momentum relation</strong>.</p>
@@ -708,27 +720,9 @@ physics and quantum field theory.</p>
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="00-special-relativity.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span>Special Relativity</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="01-the-dirac-equation.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.4. </span>The Klein-Gordon Equation</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -745,9 +739,9 @@ physics and quantum field theory.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2.2. Four-vectors</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-metric">2.3. The Metric</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-4-vector">2.3.1. Momentum 4-vector</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Four-vectors</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-metric">The Metric</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-4-vector">Momentum 4-vector</a></li>
 </ul>
 </li>
 </ul>
@@ -799,8 +793,8 @@ By Alexander Chartrand
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

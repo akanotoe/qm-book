@@ -182,7 +182,8 @@ $$
 This means that the quantity
 
 $$
-w^\mu = \frac{dr^\mu}{d\tau}
+w^\mu = \frac{dr^\mu}{d\tau} = \frac{dt}{d\tau} \frac{dr^\mu}{dt} 
+      = \gamma \frac{dr^\mu}{dt}
 $$
 transforms as a four-vector,
 
@@ -195,21 +196,29 @@ component is
 $$
 w^0 = \frac{dr^0}{d\tau} = c\frac{dt}{d\tau} = \gamma c
 $$
-and its inner product with itself is
+while its spatial components (with the velocity vector called ${\bf u}$)
+are
 
 $$
-w^\mu w_\mu = \gamma^2(c^2 - v^2) = c^2
+w^i = \gamma u^i.
 $$
-which is invariant (as it should be!). The momentum four-vector is mass times
-proper velocity:
+Taking the inner product of the proper velocity with itself yields
+
+$$
+w^\mu w_\mu = \gamma^2(c^2 - u^2) = c^2,
+$$
+which is invariant (as it should be!). From here we can define the 
+momentum four-vector as mass times proper velocity:
 
 $$
 p^\mu = m w^\mu = \gamma m
 \begin{pmatrix}
-c \\ w_x \\ w_y \\ w_z
+c \\ u_x \\ u_y \\ u_z
 \end{pmatrix}.
 $$
-Defining $p^0 = E/c$ as the relativistic energy (divided by $c$), we get
+The temporal component is called the *relativistic energy* (divided
+by $c$), $p^0 = E/c$, which we will justify in a bit. Now the momentum
+four-vector looks like
 
 $$
 p^\mu =
@@ -228,7 +237,9 @@ rest energy as
 $$
 E_{\rm rest} = mc^2.
 $$ (eq:Emc2)
-The **kinetic energy** is the total energy minus the rest energy,
+Note that the rest energy of a system is an invariant; all observers can
+agree what the mass of an object is when it is at rest. The 
+**kinetic energy** is the total energy minus the rest energy,
 
 $$
 E_{\rm kin} = E - mc^2 = (\gamma - 1)mc^2.
